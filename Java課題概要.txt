@@ -1,0 +1,63 @@
+・テーブル１（生徒用）
+CREATE TABLE Student (
+		id INT(9) NOT NULL,
+		name VARCHAR(64) NOT NULL,
+		gender VARCHAR(5) NOT NULL,
+		email VARCHAR(64) NOT NULL,
+		department VARCHAR(20) NOT NULL,
+		course VARCHAR(30) NOT NULL,
+		qualification_id INT(5),
+		pass VARCHAR(64) NOT NULL,
+		PRIMARY KEY (id));
+
+生徒ID
+名前
+性別
+メールアドレス
+学科
+コース
+資格ID(資格ない人は空欄）
+パスワード
+
+・テーブル２（教師用）
+CREATE TABLE Teacher (
+		id INT(9) NOT NULL,
+		name VARCHAR(64) NOT NULL,
+		email VARCHAR(64) NOT NULL,
+		department VARCHAR(20) NOT NULL,
+		pass VARCHAR(64) NOT NULL,
+		PRIMARY KEY (id));
+
+教師ID
+名前
+メールアドレス
+学科
+パスワード
+
+・テーブル３（資格情報用）
+CREATE TABLE Qualification(
+		id INT(9) NOT NULL,	
+		classification VARCHAR(64) NOT NULL,
+		name VARCHAR(64) NOT NULL,
+		PRIMARY KEY (id));
+
+資格ID（生徒用から持ってくるため）
+資格区分
+資格名
+
+・テーブル４（資格取得日保存用）
+CREATE TABLE Gets (
+		id INT(9) NOT NULL,
+		name VARCHAR(64) NOT NULL,
+		sid INT(9) NOT NULL,
+		date VARCHAR(64) NOT NULL,
+		PRIMARY KEY (id));
+資格ID
+資格名
+生徒ID
+取得日
+
+・実装したいもの
+ログイン（セッション処理）
+
+git clone https://Hiroki01@bitbucket.org/Hiroki01/summer.git
