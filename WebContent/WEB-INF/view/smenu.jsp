@@ -7,6 +7,6 @@
 <title>資格管理（生徒用）</title>
 </head>
 <body>
-
+<p>生徒用</p>
 </body>
 </html>
