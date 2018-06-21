@@ -62,7 +62,7 @@ function sel_ch(){
 			<option></option>
 		</select> <br>取得済み資格ID<input type="text" name="qu" required> <br>
 		パスワード<input type="password" name="pass" required> <br>
-		<input type="submit" values="登録"><br>
+		<input type="submit" value="登録"><br>
 	</form>
 </body>
 </html>
