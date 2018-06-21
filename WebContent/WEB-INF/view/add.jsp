@@ -48,9 +48,9 @@
 			<option value="男">男</option>
 			<option value="女">女</option>
 			<option value="ウホッ">ウホッ</option>
-			</select>
-			<br> 学科
-			<select name="department" onChange="functionName()" required>
+			</select><br>
+			メールアドレス<input type="email" name="email" required>
+			<br> 学科<select name="department" onChange="functionName()" required>
 				<option value="情報システム科" selected>情報システム科</option>
 				<option value="総合システム工学科">総合システム工学科</option>
 				<option value="ネットワーク・セキュリティ科">ネットワーク・セキュリティ科option>
@@ -59,12 +59,9 @@
 				<option value="会計ビジネス科">会計ビジネス科</option>
 				<option value="デザイン科">デザイン科</option>
 				<option value="総合デザイン科">総合デザイン科</option>
-		</select><br> コース
-			<select name="course" required>
-		</select> <br>取得済み資格ID
-			<input type="text" name="qu" required>
-		<br> パスワード
-			<input type="password" name="pass" required>
+		</select><br> コース<select name="course" required>
+		</select> <br>取得済み資格ID<input type="text" name="qu" required>
+		<br> パスワード<input type="password" name="pass" required>
 		<br>
 	</form>
 </body>
