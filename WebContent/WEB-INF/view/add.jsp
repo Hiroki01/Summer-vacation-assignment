@@ -19,6 +19,8 @@
 	<%
 	String select[] = request.getParameterValues("deparment");
 	if(select.equals("情報システム科")){ %>
+
+	<%} %>
 	<input type="text" name="name"><br>
 	<input type="text" name="name"><br>
 	<input type="text" name="name"><br>
