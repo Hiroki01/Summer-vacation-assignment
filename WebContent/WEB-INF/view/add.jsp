@@ -4,37 +4,29 @@
 <html>
 <head>
 <meta charset=UTF-8>
-<SCRIPT>
-function sel_ch(){
-	var j = document.f.department.selectedIndex;
-	var sel = document.f.department.options[j].text;
-		if(sel == "情報システム科"){
-			document.f.course.options[0].text = "システムエンジニアコース"
-			document.f.course.options[1].text = "スマートフォンアプリ開発コース"
-		}else if(sel == "総合システム工学科"){
-			document.f.course.options[0].text = "WEBプログラマコース"
-			document.f.course.options[1].text = "組込みシステムコース"
-		}else if(sel == "ネットワーク・セキュリティ科"){
-			document.f.course.options[0].text = "ネットワークエンジニアコース";
-			document.f.course.options[1].text = "情報セキュリティコース";
-		}else if(sel == "高度情報工学科"){
-			document.f.course.options[0].text = "高度情報工学科";
-		}else if(sel == "情報ビジネス科"){
-			document.f.course.options[0].text = "情報ビジネスコース";
-			document.f.course.options[1].text = "公共ビジネスコース";
-		}else if(sel == "会計ビジネス科"){
-			document.f.course.options[0].text = "会計ビジネスコース";
-			document.f.course.options[1].text = "会計エキスパートコース";
-		}else if(sel == "デザイン科"){
-			document.f.course.options[0].text = "グラフィックデザインコース";
-			document.f.course.options[1].text = "アニメ・マンガコース";
-			document.f.course.options[2].text = "CGクリエイトコース";
-			document.f.course.options[3].text = "建築インテリアコース";
-		}else if(sel == "総合デザイン科"){
-			document.f.course.options[0].text = "総合デザインコース";
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script>
+$(function() {
+	$('select[name="department"]').change(function() {
+		var gakka = $('select[name="department"] option:selected').attr("class");
+		console.log(gakka);
+		var count = $('select[name="course"]').children().length;
+		for (var i=0; i<count; i++) {
+			var ko-su = $('select[name="course"] option:eq(' + i + ')');
+			if(ko-su.attr("class") === gakka) {
+				ko-su.show();
+			}else {
+				if(ko-su.attr("class") === "msg") {
+						ko-su.show();
+						ko-su.prop('selected',true);
+				} else {
+					ko-su.hide();
+				}
+			}
 		}
-}
-</SCRIPT>
+	})
+})
+</script>
 <title>新規登録用画面（生徒用）</title>
 </head>
 <body>
@@ -47,19 +39,34 @@ function sel_ch(){
 			<option value="ウホッ">ウホッ</option>
 		</select><br> メールアドレス<input type="email" name="email" required> <br>
 		学科<select name="department" required>
-			<option value="情報システム科" selected>情報システム科</option>
-			<option value="総合システム工学科">総合システム工学科</option>
-			<option value="ネットワーク・セキュリティ科">ネットワーク・セキュリティ科</option>
-			<option value="高度情報工学科">高度情報工学科</option>
-			<option value="情報ビジネス科">情報ビジネス科</option>
-			<option value="会計ビジネス科">会計ビジネス科</option>
-			<option value="デザイン科">デザイン科</option>
-			<option value="総合デザイン科">総合デザイン科</option>
-		</select><br> コース<select onFocus="sel_ch()" name="course" required>
-			<option></option>
-			<option></option>
-			<option></option>
-			<option></option>
+		<option value="s1" selected class="msg">学科を選択してください</option>
+			<option value="情報システム科" class="s1">情報システム科</option>
+			<option value="総合システム工学科"class="s2">総合システム工学科</option>
+			<option value="ネットワーク・セキュリティ科" class="s3">ネットワーク・セキュリティ科</option>
+			<option value="高度情報工学科"class="s4">高度情報工学科</option>
+			<option value="情報ビジネス科"class="b1">情報ビジネス科</option>
+			<option value="会計ビジネス科"class="b2">会計ビジネス科</option>
+			<option value="デザイン科"class="d1">デザイン科</option>
+			<option value="総合デザイン科"class="d2">総合デザイン科</option>
+		</select><br>
+		 コース<select onFocus="sel_ch()" name="course" required>
+		 	<option value="s1" selected="selected" class="msg">コースを選択してください</option>
+			<option class="s1" value="システムエンジニアコース"></option>
+			<option class="s1" value="スマートフォンアプリ開発コース"></option>
+			<option class="s2" value="WEBプログラマコース"></option>
+			<option class="s2" value="組込みシステムコース"></option>
+			<option class="s3" value="ネットワークエンジニアコース"></option>
+			<option class="s3" value="情報セキュリティコース"></option>
+			<option class="s4" value="高度情報工学科"></option>
+			<option class="b1" value="情報ビジネスコース"></option>
+			<option class="b1" value="公共ビジネスコース"></option>
+			<option class="b2" value="会計ビジネスコース"></option>
+			<option class="b2" value="会計エキスパートコース"></option>
+			<option class="d1" value="グラフィックデザインコース"></option>
+			<option class="d1" value="アニメ・マンガコース"></option>
+			<option class="d1" value="CGクリエイトコース"></option>
+			<option class="d1" value="建築インテリアコース"></option>
+			<option class="d2" value="総合デザインコース"></option>
 		</select> <br>取得済み資格ID<input type="text" name="qu" required> <br>
 		パスワード<input type="password" name="pass" required> <br>
 		<input type="submit" value="登録"><br>
