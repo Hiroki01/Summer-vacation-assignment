@@ -7,6 +7,33 @@
 <title>新規登録用画面（生徒用）</title>
 </head>
 <body>
+<%
+		HttpSession sessions = request.getSession(true);
+
+		/* 認証失敗から呼び出されたのかどうか */
+		Object status = session.getAttribute("status");
+
+		while (status != null) {
+			if (status.equals("NO")) {
+	%>
+	<p>
+		IDが数値型ではないです。<br> 再度IDを数値型に直して入力してください。
+	</p>
+	<%
+		session.setAttribute("status", null);
+			} else if (status.equals("Null")) {
+	%>
+	<p>存在しないユーザです。</p>
+	<%
+		session.setAttribute("status", null);
+			} else if (status.equals("Exception")) {
+	%>
+	<p>エラーが発生しました。</p>
+	<%
+		session.setAttribute("status", null);
+			}
+		}
+	%>
 	<form action="/Qualification/AddResult" name="f" method="post">
 		学籍番号：<input type="text" name="id" required><br>
 		氏名：<input type="text" name="name" required><br>
