@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.PrivateQualificationDAO;
 import dao.StudentDAO;
+import dto.PrivateQualificationDTO;
 import dto.StudentDTO;
 
 /**
@@ -54,6 +56,8 @@ public class AddResult extends HttpServlet {
 			}
 			String pass = re.getParameter("pass");
 
+			PrivateQualificationDTO res = PrivateQualificationDAO.create(id, name, qu);
+			re.setAttribute("create", res);
 			StudentDTO result = StudentDAO.Insert(id, name, gender, email, department, course, qu, pass);
 			re.setAttribute("add", result);
 			view = "/WEB-INF/view/addResult.jsp";
