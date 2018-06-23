@@ -1,0 +1,76 @@
+form.contact {
+width: 700px;
+font-size: 80%;
+
+}
+
+form.contact p {
+line-height: 130%;
+}
+
+form.contact p.attention img {
+vertical-align: middle;
+}
+
+form.contact table {
+width: 100%;
+background-color: #f9f9f9;
+border: 1px #c0c0c0 solid;
+}
+
+form.contact th {
+width: 140px;
+padding: 10px 8px;
+background-color: #f5f5f5;
+border-bottom: 1px #c0c0c0 dotted;
+text-align: left;
+line-height: 130%;
+}
+
+form.contact th span.supplement {
+font-weight: normal;
+}
+
+form.contact td {
+padding: 10px 5px 7px;
+background-color: #ffffff;
+border-bottom: 1px #c0c0c0 dotted;
+}
+
+form.contact td span.supplement {
+color: #808080;
+}
+
+form.contact td.required {
+width: 26px;
+padding: 10px 3px;
+background-color: #c4e6fa;
+text-align: center;
+}
+
+form.contact td.arbitrary {
+background-color: #e0f1fc;
+}
+
+form.contact input,
+form.contact select,
+form.contact textarea {
+margin-bottom: 2px;
+}
+
+#id, #name, #gender, #email,#department,
+#course, #gaku,#set_in,#pass {
+width: 350px;
+}
+
+#message {
+width: 420px;
+height: 10em;
+}
+
+form.contact p.button {
+margin: 20px 0 0;
+text-align: center;
+}
+
+form

@@ -8,10 +8,27 @@
 <meta content="text/html; charset=utf-8">
 <link rel="stylesheet" href="/Qualification/css/style.css"
 	type="text/css" />
+	<script>
+	$(document).ready(function() {
+		  var pagetop = $('.pagetop');
+		    $(window).scroll(function () {
+		       if ($(this).scrollTop() > 100) {
+		            pagetop.fadeIn();
+		       } else {
+		            pagetop.fadeOut();
+		            }
+		       });
+		       pagetop.click(function () {
+		           $('body, html').animate({ scrollTop: 0 }, 100);
+		              return false;
+		   });
+		});
+	</script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 </head>
 
 <body>
-
+<p class="pagetop"><a href="#content">トップ</a></p>
 	<div class="content">
 		<div id="top">
 			<div class="header">
