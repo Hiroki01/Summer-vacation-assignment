@@ -6,7 +6,8 @@ CREATE TABLE Student (
 		email VARCHAR(64) NOT NULL,
 		department VARCHAR(20) NOT NULL,
 		course VARCHAR(30) NOT NULL,
-		qualification_id INT(5),
+		school_year INT(1) NOT NULL,
+		set_in INT(1) NOT NULL, 
 		pass VARCHAR(64) NOT NULL,
 		PRIMARY KEY (id));
 
@@ -16,7 +17,8 @@ CREATE TABLE Student (
 メールアドレス
 学科
 コース
-資格ID(資格ない人は空欄）
+学年
+組
 パスワード
 
 ・テーブル２（教師用）
@@ -24,39 +26,43 @@ CREATE TABLE Teacher (
 		id INT(9) NOT NULL,
 		name VARCHAR(64) NOT NULL,
 		email VARCHAR(64) NOT NULL,
-		department VARCHAR(20) NOT NULL,
 		pass VARCHAR(64) NOT NULL,
 		PRIMARY KEY (id));
 
 教師ID
 名前
 メールアドレス
-学科
 パスワード
 
 ・テーブル３（資格情報用）
-CREATE TABLE Qualification(
-		id INT(9) NOT NULL,	
-		classification VARCHAR(64) NOT NULL,
+CREATE TABLE Qualification(	
 		name VARCHAR(64) NOT NULL,
-		PRIMARY KEY (id));
+		date VARCHAR(64) NOT NULL,
+		sid INT(9) NOT NULL,
+		result VARCHAR(3) NOT NULL,
+		PRIMARY KEY (name));
 
-資格ID（生徒用から持ってくるため）
-資格区分
 資格名
+受験日
+生徒（学籍番号）ID
+受験結果（合格、不合格、未受験）
 
-・テーブル４（資格取得日保存用）
-CREATE TABLE Gets (
+・テーブル４（管理者用）
+CREATE TABLE Admin (
 		id INT(9) NOT NULL,
 		name VARCHAR(64) NOT NULL,
-		sid INT(9) NOT NULL,
-		date VARCHAR(64) NOT NULL,
+		email VARCHAR(64) NOT NULL,
+		pass VARCHAR(64) NOT NULL,
 		PRIMARY KEY (id));
-資格ID
-資格名
-生徒ID
-取得日
 
+管理者ID
+管理者名前
+
+・その他必要情報
+INSERT INTO Student VALUES(4171128,'中村　宏紀','男',
+'magifes1231@gmail.com','情報システム科','システムエンジニアコース',2,1,'pass');
+INSERT INTO Teacher VALUES(101,'武田　陽太','raysay680@gmail.com','cat');
+INSERT INTO Admin VALUES(1,'ADMIN','magifes1231@gmail.com','got');
 ・実装したいもの
 ログイン（セッション処理）
 
