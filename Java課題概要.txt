@@ -63,7 +63,33 @@ INSERT INTO Student VALUES(4171128,'中村　宏紀','男',
 'magifes1231@gmail.com','情報システム科','システムエンジニアコース',2,1,'pass');
 INSERT INTO Teacher VALUES(101,'武田　陽太','raysay680@gmail.com','cat');
 INSERT INTO Admin VALUES(1,'ADMIN','magifes1231@gmail.com','got');
+
 ・実装したいもの
 ログイン（セッション処理）
+ユーザ登録（生徒用）
+ユーザ登録（教師用は管理者のみ実行可能）
+管理者登録はコマンドプロンプトからのみ
+生徒
+受験資格登録
+受験資格一覧
+合格のみ表示
+プロフィール画面変更
+教師
+受験結果検索（ユーザ無差別）
+受験結果一覧
+受験結果検索（ユーザ個別）
+学年ごと検索
+クラスごと検索（ログイン時にセッション保存）
+データCSVに関しては先生に確認
+管理者
+教師登録
+ユーザ削除
+ユーザ更新
+データベース変更
+オリジナル機能
+css
+js
+追加予定
 
 git clone https://Hiroki01@bitbucket.org/Hiroki01/summer.git
+https://bitbucket.org/Hiroki01/summer/src/master/
