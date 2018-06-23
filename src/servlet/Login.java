@@ -41,14 +41,17 @@ public class Login extends HttpServlet {
 		try {
 			int id = Integer.parseInt(re.getParameter("id"));
 			String pass = re.getParameter("pass");
-			if (id > 100000000) {
+			if (id > 1000000) {
 				result = LoginDAO.login(id, pass);
 				view = "/WEB-INF/view/smenu.jsp";
 				// 生徒用
-			} else {
+			} else if (id < 1000000) {
 				result = LoginDAO.logins(id, pass);
 				view = "/WEB-INF/view/tmenu.jsp";
 				// 教師用
+			} else {
+				result = LoginDAO.admin(id, pass);
+				view = "/WEB-INF/view/admin.jsp";
 			}
 			s.setAttribute("user", result);
 

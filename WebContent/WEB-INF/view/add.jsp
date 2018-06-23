@@ -42,6 +42,7 @@
 			<option value="女">女</option>
 			<option value="ウホッ">ウホッ</option>
 			<option value="ノンケ">ノンケ</option>
+			<option value="その他">その他</option>
 		</select><br>
 		 メールアドレス：<input type="email" name="email" required> <br>
 		学科：<select name="department" required>
@@ -89,7 +90,16 @@
 				<option class="d2" value="総合デザインコース">総合デザインコース</option>
 			</optgroup>
 		</select> <br>
-		取得済み資格ID：<input type="text" name="qu"> <br>
+		<select name="school_year" required>
+			<option value ="1">1</option>
+			<option value ="2">2</option>
+			<option value ="3">3</option>
+			<option value ="4">4</option>
+		</select>
+		<select name="set_in" required>
+			<option value ="1">1</option>
+			<option value ="2">2</option>
+		</select>
 		パスワード：<input type="password" name="pass" required> <br>
 		<input type="submit" value="登録"><br>
 	</form>

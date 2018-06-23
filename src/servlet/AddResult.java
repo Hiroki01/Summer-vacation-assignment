@@ -10,9 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.PrivateQualificationDAO;
 import dao.StudentDAO;
-import dto.PrivateQualificationDTO;
 import dto.StudentDTO;
 
 /**
@@ -48,17 +46,12 @@ public class AddResult extends HttpServlet {
 			System.out.println(department);
 			String course = re.getParameter("course");
 			System.out.println(course);
-			String qu;
-			if (re.getParameter("qu").length() == 0) {
-				qu = null;
-			} else {
-				qu = re.getParameter("qu");
-			}
+			String school_year = re.getParameter("school_year");
+			String set_in = re.getParameter("set_in");
 			String pass = re.getParameter("pass");
 
-			PrivateQualificationDTO res = PrivateQualificationDAO.create(id, name, qu);
-			re.setAttribute("create", res);
-			StudentDTO result = StudentDAO.Insert(id, name, gender, email, department, course, qu, pass);
+			StudentDTO result = StudentDAO.Insert(id, name, gender, email, department, course, school_year, set_in,
+					pass);
 			re.setAttribute("add", result);
 			view = "/WEB-INF/view/addResult.jsp";
 		} catch (NumberFormatException e) {

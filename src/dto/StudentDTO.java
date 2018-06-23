@@ -7,18 +7,20 @@ public class StudentDTO {
 	private String email;
 	private String department;
 	private String course;
-	private String qu;
+	private String school_year;
+	private String set_in;
 	private String pass;
 
-	public StudentDTO(int id, String name, String gender, String email, String department, String course, String qu,
-			String pass) {
+	public StudentDTO(int id, String name, String gender, String email, String department, String course,
+			String school_year, String set_in, String pass) {
 		this.id = id;
 		this.name = name;
 		this.gender = gender;
 		this.email = email;
 		this.department = department;
 		this.course = course;
-		this.qu = qu;
+		this.school_year = school_year;
+		this.set_in = set_in;
 		this.pass = pass;
 	}
 
@@ -70,12 +72,20 @@ public class StudentDTO {
 		this.course = course;
 	}
 
-	public String getQu() {
-		return qu;
+	public String getSchool_year() {
+		return school_year;
 	}
 
-	public void setQu(String qu) {
-		this.qu = qu;
+	public void setSchool_year(String school_year) {
+		this.school_year = school_year;
+	}
+
+	public String getSet_in() {
+		return set_in;
+	}
+
+	public void setSet_in(String set_in) {
+		this.set_in = set_in;
 	}
 
 	public String getPass() {
@@ -85,5 +95,6 @@ public class StudentDTO {
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
+
 
 }
