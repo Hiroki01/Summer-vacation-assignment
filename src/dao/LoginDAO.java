@@ -18,7 +18,7 @@ public class LoginDAO {
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			co = DriverManager.getConnection("jdbc:mysql://localhost:3306/library?useSSL=false", "book", "book");
+			co = DriverManager.getConnection("jdbc:mysql://localhost:3306/Qualification?useSSL=false", "got", "pass");
 			String sql = "SELECT * FROM Student WHERE id = ? AND pass = ?;";
 			ps = co.prepareStatement(sql);
 			ps.setInt(1, id);
@@ -72,7 +72,7 @@ public class LoginDAO {
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			co = DriverManager.getConnection("jdbc:mysql://localhost:3306/library?useSSL=false", "book", "book");
+			co = DriverManager.getConnection("jdbc:mysql://localhost:3306/Qualification?useSSL=false", "got", "pass");
 			String sql = "SELECT * FROM Teacher WHERE id = ? AND pass = ?;";
 			ps = co.prepareStatement(sql);
 			ps.setInt(1, id);
@@ -126,7 +126,7 @@ public class LoginDAO {
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			co = DriverManager.getConnection("jdbc:mysql://localhost:3306/library?useSSL=false", "book", "book");
+			co = DriverManager.getConnection("jdbc:mysql://localhost:3306/Qualification?useSSL=false", "got", "pass");
 			String sql = "SELECT * FROM Admin WHERE id = ? AND pass = ?;";
 			ps = co.prepareStatement(sql);
 			ps.setInt(1, id);
