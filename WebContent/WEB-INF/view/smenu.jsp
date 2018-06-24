@@ -95,7 +95,7 @@
 	</div>
 	<!--contents-->
 	<footer class="footer">
-		<small>&copy; 2014-<span id="thisYear"></span> hirasawa junjun
+		<small>&copy; 1999-<span id="thisYear"></span> hirasawa junjun
 		</small>
 
 		<script type="text/javascript">
