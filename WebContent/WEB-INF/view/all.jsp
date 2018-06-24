@@ -23,6 +23,14 @@
 				<h1>
 					<a href="/Qualification/TopShow">資格取得状況一見</a>
 				</h1>
+				<div id="menu">
+					<ul>
+						<li><a href="/Qualification/All_qualifications">所持資格一覧</a></li>
+						<li><a href="/Qualification">所持資格検索</a></li>
+						<li><a href="/Qualification">プロフィール画面</a></li>
+					</ul>
+				</div>
+				<!-- /#menu -->
 			</div>
 			<!-- /header -->
 		</div>
