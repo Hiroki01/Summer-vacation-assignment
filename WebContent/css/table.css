@@ -1,0 +1,35 @@
+table.example {
+width: 650px;
+border: 1px #c0c0c0 solid;
+border-collapse: collapse;
+font-size: 80%;
+}
+
+table.example caption {
+padding-bottom: 5px;
+}
+
+table.example th,
+table.example td {
+/* width: 20%; */
+padding: 6px 8px;
+border: 1px #c0c0c0 solid;
+}
+
+table.example thead th {
+background-color: #deefff;
+text-align: center;
+}
+
+table.example {
+background-color: #f5f5f5;
+}
+
+table.example tbody {
+background-color: #ffffff;
+}
+
+table.example tbody tr:hover {
+background-color: #e5e5e5;
+}
+

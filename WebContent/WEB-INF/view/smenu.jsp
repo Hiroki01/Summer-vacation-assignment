@@ -8,27 +8,32 @@
 <meta content="text/html; charset=utf-8">
 <link rel="stylesheet" href="/Qualification/css/style.css"
 	type="text/css" />
-	<script>
+<script>
 	$(document).ready(function() {
-		  var pagetop = $('.pagetop');
-		    $(window).scroll(function () {
-		       if ($(this).scrollTop() > 100) {
-		            pagetop.fadeIn();
-		       } else {
-		            pagetop.fadeOut();
-		            }
-		       });
-		       pagetop.click(function () {
-		           $('body, html').animate({ scrollTop: 0 }, 100);
-		              return false;
-		   });
+		var pagetop = $('.pagetop');
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 100) {
+				pagetop.fadeIn();
+			} else {
+				pagetop.fadeOut();
+			}
 		});
-	</script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		pagetop.click(function() {
+			$('body, html').animate({
+				scrollTop : 0
+			}, 100);
+			return false;
+		});
+	});
+</script>
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 </head>
 
 <body>
-<p class="pagetop"><a href="#content">トップ</a></p>
+	<p class="pagetop">
+		<a href="#content">トップ</a>
+	</p>
 	<div class="content">
 		<div id="top">
 			<div class="header">
@@ -37,7 +42,7 @@
 				</h1>
 				<div id="menu">
 					<ul>
-						<li><a href="/Qualification">所持資格一覧</a></li>
+						<li><a href="/Qualification/All_qualifications">所持資格一覧</a></li>
 						<li><a href="/Qualification">所持資格検索</a></li>
 						<li><a href="/Qualification">プロフィール画面</a></li>
 					</ul>
@@ -74,12 +79,14 @@
 				<h1>所持資格一覧</h1>
 			</div>
 			<!-- heading -->
-			<p>自分の持っている資格を確認することができます。</p><br>
+			<p>自分の持っている資格を確認することができます。</p>
+			<br>
 			<div class="heading">
 				<h1>所持資格検索(特定）</h1>
 			</div>
 			<!-- heading -->
-			<p>資格名を検索窓に入れることでその情報だけを取り出すことができます。</p><br>
+			<p>資格名を検索窓に入れることでその情報だけを取り出すことができます。</p>
+			<br>
 			<div class="heading">
 				<h1>プロフィール画面について</h1>
 			</div>
