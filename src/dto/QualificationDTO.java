@@ -1,16 +1,26 @@
 package dto;
 
 public class QualificationDTO {
+	private int id;
 	private String name;
 	private String date;
 	private int sid;
 	private String result;
 
-	public QualificationDTO(String name, String date, int sid, String result) {
+	public QualificationDTO(int id, String name, String date, int sid, String result) {
+		this.id = id;
 		this.name = name;
 		this.date = date;
 		this.sid = sid;
 		this.result = result;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getName() {
