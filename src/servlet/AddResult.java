@@ -39,18 +39,17 @@ public class AddResult extends HttpServlet {
 		try {
 			int id = Integer.parseInt(re.getParameter("id"));
 			String name = re.getParameter("name");
+			String namek = re.getParameter("namek");
 			String gender = re.getParameter("gender");
-			System.out.println(gender);
 			String email = re.getParameter("email");
 			String department = re.getParameter("department");
-			System.out.println(department);
 			String course = re.getParameter("course");
-			System.out.println(course);
 			String school_year = re.getParameter("school_year");
 			String set_in = re.getParameter("set_in");
 			String pass = re.getParameter("pass");
 
-			StudentDTO result = StudentDAO.Insert(id, name, gender, email, department, course, school_year, set_in,
+			StudentDTO result = StudentDAO.Insert(id, name, namek, gender, email, department, course, school_year,
+					set_in,
 					pass);
 			re.setAttribute("add", result);
 			view = "/WEB-INF/view/addResult.jsp";

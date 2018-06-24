@@ -9,7 +9,8 @@ import dto.StudentDTO;
 
 public class StudentDAO {
 
-	public static StudentDTO Insert(int id, String name, String gender, String email, String department, String course,
+	public static StudentDTO Insert(int id, String name, String namek, String gender, String email, String department,
+			String course,
 			String school_year, String set_in, String pass) {
 		StudentDTO result = null;
 		Connection co = null;
@@ -21,16 +22,17 @@ public class StudentDAO {
 			ps = co.prepareStatement(sql);
 			ps.setInt(1, id);
 			ps.setString(2, name);
-			ps.setString(3, gender);
-			ps.setString(4, email);
-			ps.setString(5, department);
-			ps.setString(6, course);
-			ps.setString(7, school_year);
-			ps.setString(8, set_in);
-			ps.setString(9, pass);
+			ps.setString(3, namek);
+			ps.setString(4, gender);
+			ps.setString(5, email);
+			ps.setString(6, department);
+			ps.setString(7, course);
+			ps.setString(8, school_year);
+			ps.setString(9, set_in);
+			ps.setString(10, pass);
 
 			ps.executeUpdate();
-			result = new StudentDTO(id, name, gender, email, department, course, school_year, set_in, pass);
+			result = new StudentDTO(id, name, namek, gender, email, department, course, school_year, set_in, pass);
 		} catch (SQLException e) {
 			System.out.println("DBアクセスに失敗しました。");
 			e.printStackTrace();

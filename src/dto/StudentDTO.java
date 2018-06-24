@@ -3,6 +3,7 @@ package dto;
 public class StudentDTO {
 	private int id;
 	private String name;
+	private String namek;
 	private String gender;
 	private String email;
 	private String department;
@@ -11,10 +12,11 @@ public class StudentDTO {
 	private String set_in;
 	private String pass;
 
-	public StudentDTO(int id, String name, String gender, String email, String department, String course,
+	public StudentDTO(int id, String name, String namek, String gender, String email, String department, String course,
 			String school_year, String set_in, String pass) {
 		this.id = id;
 		this.name = name;
+		this.namek = namek;
 		this.gender = gender;
 		this.email = email;
 		this.department = department;
@@ -38,6 +40,14 @@ public class StudentDTO {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getNamek() {
+		return namek;
+	}
+
+	public void setNamek(String namek) {
+		this.namek = namek;
 	}
 
 	public String getGender() {

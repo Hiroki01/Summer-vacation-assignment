@@ -9,7 +9,8 @@
 	type="text/css" />
 <link rel="stylesheet" href="/Qualification/css/style.css"
 	type="text/css" />
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <title>新規登録用画面（生徒用）</title>
 </head>
 
@@ -51,7 +52,8 @@
 			<!-- /header -->
 		</div>
 		<!-- /top-->
-		<div class="main"><br>
+		<div class="main">
+			<br>
 			<form action="/Qualification/AddResult" name="f" class="contact"
 				method="post">
 				<p>以下のフォームにご入力の上、「入力内容の確認画面へ」ボタンをクリックしてください。</p>
@@ -67,14 +69,24 @@
 							<td class="arbitrary"><img
 								src="/Qualification/image/required1.gif" alt="必須" width="26"
 								height="15"></td>
-							<td><input type="text" name="id" required></td>
+							<td><input type="text" name="id" required> <br>
+								<span class="supplement">注意） 1000001以下は入力できません</span></td>
 						</tr>
 						<tr>
 							<th><label for="name">氏名：</label></th>
 							<td class="arbitrary"><img
 								src="/Qualification/image/required1.gif" alt="必須" width="26"
 								height="15"></td>
-							<td><input type="text" name="name" required></td>
+							<td><input type="text" name="name" required><br>
+								<span class="supplement">例） 田中 太郎</span></td>
+						</tr>
+						<tr>
+							<th><label for="name">氏名（カタカナ）：</label></th>
+							<td class="arbitrary"><img
+								src="/Qualification/image/required1.gif" alt="必須" width="26"
+								height="15"></td>
+							<td><input type="text" name="namek" required><br>
+								<span class="supplement">例） タナカ タロウ</span></td>
 						</tr>
 						<tr>
 							<th><label for="gender">性別：</label></th>
@@ -94,7 +106,9 @@
 							<td class="arbitrary"><img
 								src="/Qualification/image/required1.gif" alt="必須" width="26"
 								height="15"></td>
-							<td><input type="email" name="email" required></td>
+							<td><input type="email" name="email" required><span>
+								class="supplement">（半角英数字）</span><br> <span
+								class="supplement">ご入力お間違えの無いように</span></td>
 						</tr>
 						<tr>
 							<th><label for="department"> 学科：</label></th>
@@ -181,12 +195,17 @@
 							<td class="arbitrary"><img
 								src="/Qualification/image/required1.gif" alt="必須" width="26"
 								height="15"></td>
-							<td><input type="password" name="pass" required></td>
+							<td><input type="password" name="pass" required><br> <span
+								class="supplement">ご入力お間違えの無いように</span></td>
 						</tr>
 					</tbody>
 				</table>
-				<p class="button"><input type="submit" value="入力内容の確認画面へ"></p><br>
-			</form><br>
+				<p class="button">
+					<input type="submit" value="入力内容の確認画面へ">
+				</p>
+				<br>
+			</form>
+			<br>
 			<div id="bar"></div>
 		</div>
 		<!--main-->
