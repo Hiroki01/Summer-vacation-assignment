@@ -42,9 +42,9 @@
 				</h1>
 				<div id="menu">
 					<ul>
-						<li><a href="/Qualification/All_qualifications">所持資格一覧</a></li>
+						<li><a href="/Qualification/All_qualifications">受験資格一覧</a></li>
 						<li><a href="/Qualification/Search_qualifications">所持資格検索</a></li>
-						<li><a href="/Qualification/Insert_qualifications">受験資格追加</a></li>
+						<li><a href="/Qualification/Insert_qualifications">受験資格登録</a></li>
 						<li><a href="/Qualification/Update_qualifications">受験結果更新</a></li>
 						<li><a href="/Qualification/profile">プロフィール画面</a></li>
 					</ul>
