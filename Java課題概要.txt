@@ -37,12 +37,13 @@ CREATE TABLE Teacher (
 パスワード
 
 ・テーブル３（資格情報用）
-CREATE TABLE Qualification(	
+CREATE TABLE Qualification(
+		id INT(5) NOT NULL,	
 		name VARCHAR(64) NOT NULL,
 		date VARCHAR(64) NOT NULL,
 		sid INT(9) NOT NULL,
 		result VARCHAR(3) NOT NULL,
-		PRIMARY KEY (name));
+		PRIMARY KEY (id));
 
 資格名
 受験日
@@ -57,6 +58,12 @@ CREATE TABLE Admin (
 		pass VARCHAR(64) NOT NULL,
 		PRIMARY KEY (id));
 
+・テーブル5（登録済み資格用）
+CREATE TABLE qua (
+		id INT(4) NOT NULL,
+		name VARCHAR(64) NOT NULL,
+		PRIMARY KEY (id));
+
 管理者ID
 管理者名前
 
@@ -65,16 +72,17 @@ INSERT INTO Student VALUES(4171128,'中村　宏紀','ナカムラ　ヒロキ','男',
 'magifes1231@gmail.com','情報システム科','システムエンジニアコース',2,1,'pass');
 INSERT INTO Teacher VALUES(101,'武田　陽太','raysay680@gmail.com','cat');
 INSERT INTO Admin VALUES(1,'ADMIN','magifes1231@gmail.com','got');
+INSERT INTO Qualification VALUES(
 
 ・実装したいもの
 ログイン（セッション処理）
-ユーザ登録（生徒用）
+ユーザ登録（生徒用）〇
 ユーザ登録（教師用は管理者のみ実行可能）
 管理者登録はコマンドプロンプトからのみ
 生徒
-受験資格登録
-受験資格一覧
-合格のみ表示
+受験資格登録〇
+受験資格一覧〇
+合格のみ表示〇
 プロフィール画面変更
 教師
 受験結果検索（ユーザ無差別）
