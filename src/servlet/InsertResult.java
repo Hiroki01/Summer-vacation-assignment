@@ -37,22 +37,33 @@ public class InsertResult extends HttpServlet {
 		re.setCharacterEncoding("UTF-8");
 		String view = null;
 		HttpSession s = re.getSession();
-		LoginDTO results;
+		LoginDTO results = null;
 
 		try {
+			System.out.println("確認作業中");
 			results = (LoginDTO) s.getAttribute("uesr");
+
+			System.out.println(results.getPass());
 			String name = re.getParameter("juken");
+			System.out.println(name);
 			QuaDTO res = QuaDAO.search(name);
+			System.out.println(res.getId());
 			int id = res.getId();
 			String year = re.getParameter("year");
 			String month = re.getParameter("month");
 			String day = re.getParameter("day");
-			String date = year + month + day;
+			String date = year + "年" + month + "月" + day + "日";
+			System.out.println(date);
 			String result = "未受験";
 
 			int sid = results.getId();
 
 			QualificationDTO resa = QualificationDAO.Insert(id, name, date, sid, result);
+			System.out.println(resa.getDate());
+			System.out.println(resa.getId());
+			System.out.println(resa.getName());
+			System.out.println(resa.getResult());
+			System.out.println(resa.getSid());
 			re.setAttribute("in", resa);
 			view = "/WEB-INF/view/insertResult.jsp";
 		} catch (NumberFormatException e) {

@@ -34,6 +34,7 @@ CREATE TABLE Teacher (
 
 教師ID
 名前
+名前（カタカナ）
 メールアドレス
 パスワード
 
@@ -61,7 +62,7 @@ CREATE TABLE Admin (
 
 ・テーブル5（登録済み資格用）
 CREATE TABLE qua (
-		id INT(4) NOT NULL,
+		id INT(6) NOT NULL,
 		name VARCHAR(64) NOT NULL,
 		PRIMARY KEY (id));
 
@@ -71,9 +72,15 @@ CREATE TABLE qua (
 ・その他必要情報
 INSERT INTO Student VALUES(4171128,'中村　宏紀','ナカムラ　ヒロキ','男',
 'magifes1231@gmail.com','情報システム科','システムエンジニアコース',2,1,'pass');
-INSERT INTO Teacher VALUES(101,'武田　陽太','raysay680@gmail.com','cat');
+INSERT INTO Teacher VALUES(101,'武田　陽太','タケダ　ヨウタ','raysay680@gmail.com','cat');
 INSERT INTO Admin VALUES(1,'ADMIN','magifes1231@gmail.com','got');
 INSERT INTO Qualification VALUES(
+
+mysql> insert into qua values(010001,'基本情報技術者');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into qua values(010002,'応用情報技術者');
+insert into student values(4171132,'平澤　惇哉','ヒラサワ　ジュンヤ','女','j.hirasawa1711@morijyobi.ac.jp','情報システム科','システムエンジニアコース',2,1,'keigo');
 
 ・実装したいもの
 ログイン（セッション処理）
@@ -90,7 +97,7 @@ INSERT INTO Qualification VALUES(
 受験結果一覧
 受験結果検索（ユーザ個別）
 学年ごと検索
-クラスごと検索（ログイン時にセッション保存）
+クラスごと検索
 データCSVに関しては先生に確認
 管理者
 教師登録

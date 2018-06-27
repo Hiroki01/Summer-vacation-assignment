@@ -41,7 +41,7 @@ public class Insert_qualifications extends HttpServlet {
 			ArrayList<QuaDTO> result = QuaDAO.all();
 			re.setAttribute("sikakudao", result);
 
-			view = "/WEB-INF/view/searchResult.jsp";
+			view = "/WEB-INF/view/insert.jsp";
 		} catch (NumberFormatException e) {
 			view = "/WEB-INF/view/smenu.jsp";
 			s.setAttribute("status", "No");

@@ -13,6 +13,14 @@
 	type="text/css" />
 <script type="text/javascript"
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript">
+	function f_click(row){//←引数にthisは使わない
+	var v0=row.cells[0].innerHTML;
+	var v1=row.cells[1].innerHTML;
+	var v2=row.cells[2].innerHTML;
+	alert(v0+","+v1+","+v2c);
+	}
+</script>
 <title>受験結果更新</title>
 </head>
 
@@ -39,7 +47,7 @@
 		<!-- /top-->
 		<div class="main">
 			<br>
-			<table class="example">
+			<table class="example" id="table">
 
 				<caption>あなたの受験結果未更新</caption>
 
@@ -52,10 +60,11 @@
 				</thead>
 
 				<tbody>
-				<%ArrayList<QualificationDTO> re = (ArrayList<QualificationDTO>)request.getAttribute("mijuken");
+				<%
+				ArrayList<QualificationDTO> re = (ArrayList<QualificationDTO>)request.getAttribute("mijuken");
 				for(QualificationDTO anko : re){
 				%>
-					<tr>
+					<tr onclick=f_click(this)>
 						<td><%=anko.getName() %></td>
 						<td><%=anko.getDate() %></td>
 						<td><%=anko.getResult() %></td>
@@ -63,7 +72,6 @@
 					<%} %>
 				</tbody>
 			</table>
-
 			<br>
 
 			<div id="bar"></div>
@@ -74,7 +82,6 @@
 	<footer class="footer">
 		<small>&copy; 1999-<span id="thisYear"></span> hirasawa junjun
 		</small>
-
 		<script type="text/javascript">
 			date = new Date();
 			thisYear = date.getFullYear();

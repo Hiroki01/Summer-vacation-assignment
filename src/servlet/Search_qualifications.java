@@ -42,6 +42,7 @@ public class Search_qualifications extends HttpServlet {
 		try {
 			results = (LoginDTO) s.getAttribute("uesr");
 			int id = results.getId();
+			s.setAttribute("user", results);
 			ArrayList<QualificationDTO> result = QualificationDAO.result(id);
 			re.setAttribute("goukaku", result);
 

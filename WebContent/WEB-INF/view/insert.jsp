@@ -6,6 +6,10 @@
 <html>
 <head>
 <meta charset=UTF-8>
+<link rel="stylesheet" href="/Qualification/css/style.css"
+	type="text/css" />
+	<link rel="stylesheet" href="/Qualification/css/form.css"
+	type="text/css" />
 <title>登録受験情報入力画面</title>
 </head>
 <body>
@@ -13,15 +17,25 @@
 		<div id="top">
 			<div class="header">
 				<h1>
-					<a href="/Qualification/TopShow">資格取得状況一見</a>
+					<a href="/Qualification/Smenu">資格取得状況一見</a>
 				</h1>
+				<div id="menu">
+					<ul>
+						<li><a href="/Qualification/All_qualifications">受験資格一覧</a></li>
+						<li><a href="/Qualification/Search_qualifications">所持資格検索</a></li>
+						<li><a href="/Qualification/Insert_qualifications">受験資格登録</a></li>
+						<li><a href="/Qualification/Update_qualifications">受験結果更新</a></li>
+						<li><a href="/Qualification/profile">プロフィール画面</a></li>
+					</ul>
+				</div>
+				<!-- /#menu -->
 			</div>
 			<!-- /header -->
 		</div>
 		<!-- /top-->
 		<div class="main">
 			<%
-				ArrayList<QuaDTO> re = (ArrayList<QuaDTO>) request.getAttribute("juken");
+				ArrayList<QuaDTO> re = (ArrayList<QuaDTO>) request.getAttribute("sikakudao");
 			%>
 			<br>
 			<form action="/Qualification/InsertResult" name="f" class="contact"
@@ -92,7 +106,7 @@
 							</select></td>
 						</tr>
 						<tr>
-							<th><label for="name">年</label></th>
+							<th><label for="name">月</label></th>
 							<td class="arbitrary"><img
 								src="/Qualification/image/required1.gif" alt="必須" width="26"
 								height="15"></td>
@@ -113,7 +127,7 @@
 							</select></td>
 						</tr>
 						<tr>
-							<th><label for="name">年</label></th>
+							<th><label for="name">日</label></th>
 							<td class="arbitrary"><img
 								src="/Qualification/image/required1.gif" alt="必須" width="26"
 								height="15"></td>

@@ -69,7 +69,7 @@ public class QuaDAO {
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Qualification?useSSL=false", "book", "book");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Qualification?useSSL=false", "got", "pass");
 			String sql = "SELECT * FROM qua WHERE name = ?;";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, key);

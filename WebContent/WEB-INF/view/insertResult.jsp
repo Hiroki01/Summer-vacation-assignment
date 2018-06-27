@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="java.util.ArrayList"%>
-<%@ page import="dto.QuaDTO"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset=UTF-8>
+<link rel="stylesheet" href="/Qualification/css/style.css"
+	type="text/css" />
 <title>登録受験情報入力画面</title>
 </head>
 <body>
@@ -24,7 +24,7 @@
 						<li><a href="/Qualification/Search_qualifications">所持資格検索</a></li>
 						<li><a href="/Qualification/Insert_qualifications">受験資格登録</a></li>
 						<li><a href="/Qualification/Update_qualifications">受験結果更新</a></li>
-						<li><a href="/Qualification/profile">プロフィール画面</a></li>
+						<li><a href="/Qualification/Profile">プロフィール画面</a></li>
 					</ul>
 				</div>
 				<!-- /#menu -->

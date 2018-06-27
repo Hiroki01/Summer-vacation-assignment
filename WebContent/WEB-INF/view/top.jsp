@@ -4,6 +4,10 @@
 <html>
 <head>
 <meta charset=UTF-8>
+<link rel="stylesheet" href="/Qualification/css/style.css"
+	type="text/css" />
+	<link rel="stylesheet" href="/Qualification/css/form.css"
+	type="text/css" />
 <title>盛岡情報ビジネス専門学校資格取得状況管理システム</title>
 </head>
 <body>
@@ -20,8 +24,8 @@
 		IDが数値型ではないです。<br> 再度IDを数値型に直して入力してください。
 	</p>
 	<%
-		session.setAttribute("status", null);
-			} else if (status.equals("Null")) {
+		//session.setAttribute("status", null);
+			//} else if (status.equals("Null")) {
 	%>
 	<p>存在しないユーザです。</p>
 	<%
