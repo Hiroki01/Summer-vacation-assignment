@@ -52,7 +52,7 @@ public class Login extends HttpServlet {
 			} else if (id < 1000000) {
 				result = LoginDAO.logins(id, pass);
 				if (result != null) {
-					view = "/WEB-INF/view/smenu.jsp";
+					view = "/WEB-INF/view/tmenu.jsp";
 					}else{
 						view = "/WEB-INF/view/top.jsp";
 					}
@@ -60,12 +60,15 @@ public class Login extends HttpServlet {
 			} else {
 				result = LoginDAO.admin(id, pass);
 				if (result != null) {
-					view = "/WEB-INF/view/smenu.jsp";
+					view = "/WEB-INF/view/amenu.jsp";
 					}else{
 						view = "/WEB-INF/view/top.jsp";
 					}
 			}
-			s.setAttribute("user", result);
+			int id1 = result.getId();
+			String pass1 = result.getPass();
+			s.setAttribute("id", id1);
+			s.setAttribute("pass", pass1);
 
 		} catch (NumberFormatException e) {
 			view = "/WEB-INF/view/top.jsp";

@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.QualificationDAO;
-import dto.LoginDTO;
 import dto.QualificationDTO;
 
 /**
@@ -37,12 +36,11 @@ public class Search_qualifications extends HttpServlet {
 		re.setCharacterEncoding("UTF-8");
 		String view = null;
 		HttpSession s = re.getSession();
-		LoginDTO results;
+		int id;
 
 		try {
-			results = (LoginDTO) s.getAttribute("uesr");
-			int id = results.getId();
-			s.setAttribute("user", results);
+			id = (int) s.getAttribute("id");
+
 			ArrayList<QualificationDTO> result = QualificationDAO.result(id);
 			re.setAttribute("goukaku", result);
 

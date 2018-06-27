@@ -53,7 +53,6 @@
 							<td class="arbitrary"><img
 								src="/Qualification/image/required1.gif" alt="必須" width="26"
 								height="15"></td>
-							<td>
 							<td><select name="juken" required>
 									<%
 										for (QuaDTO sikaku : re) {
