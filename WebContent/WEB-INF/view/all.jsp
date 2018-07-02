@@ -13,7 +13,7 @@
 	type="text/css" />
 <script type="text/javascript"
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<title>新規登録用画面（生徒用）</title>
+<title>受験資格一覧表示</title>
 </head>
 
 <body>
