@@ -128,13 +128,12 @@ public class QualificationDAO {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			co = DriverManager.getConnection("jdbc:mysql://localhost:3306/Qualification?useSSL=false", "got", "pass");
-			String sql = "INSERT INTO Qualification VALUES(?,?,?,?,?)";
+			String sql = "INSERT INTO Qualification(name,date,sid,result) VALUES(?,?,?,?)";
 			ps = co.prepareStatement(sql);
-			ps.setInt(1, id);
-			ps.setString(2, name);
-			ps.setString(3, date);
-			ps.setInt(4, sid);
-			ps.setString(5, result);
+			ps.setString(1, name);
+			ps.setString(2, date);
+			ps.setInt(3, sid);
+			ps.setString(4, result);
 
 			ps.executeUpdate();
 			results = new QualificationDTO(id, name, date, sid, result);

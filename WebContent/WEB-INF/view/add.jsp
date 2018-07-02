@@ -106,7 +106,7 @@
 							<td class="arbitrary"><img
 								src="/Qualification/image/required1.gif" alt="必須" width="26"
 								height="15"></td>
-							<td><input type="email" name="email" required><span>
+							<td><input type="email" name="email" required><span
 								class="supplement">（半角英数字）</span><br> <span
 								class="supplement">ご入力お間違えの無いように</span></td>
 						</tr>
