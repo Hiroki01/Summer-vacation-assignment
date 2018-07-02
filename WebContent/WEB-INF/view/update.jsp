@@ -9,12 +9,15 @@
 <meta charset=UTF-8>
 <link rel="stylesheet" href="/Qualification/css/table.css"
 	type="text/css" />
+<link rel="stylesheet" href="/Qualification/css/menu.css"
+	type="text/css" />
 <link rel="stylesheet" href="/Qualification/css/style.css"
 	type="text/css" />
+<script type="text/javascript" src="/Qualification/js/menu.js" /></script>
 <script type="text/javascript"
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>t>
 <script type="text/javascript">
-	function f_click(row){//←引数にthisは使わない
+	function f_click(row){
 	var v0=row.cells[0].innerHTML;
 	var v1=row.cells[1].innerHTML;
 	var v2=row.cells[2].innerHTML;
@@ -31,15 +34,15 @@
 				<h1>
 					<a href="/Qualification/TopShow">資格取得状況一見</a>
 				</h1>
-				<div id="menu">
+				<nav id="menubar">
 					<ul>
-						<li><a href="/Qualification/All_qualifications">所持資格一覧</a></li>
+						<li  class="current"><a href="/Qualification/All_qualifications">受験資格一覧</a></li>
 						<li><a href="/Qualification/Search_qualifications">所持資格検索</a></li>
-						<li><a href="/Qualification/Insert_qualifications">受験資格追加</a></li>
+						<li><a href="/Qualification/Insert_qualifications">受験資格登録</a></li>
 						<li><a href="/Qualification/Update_qualifications">受験結果更新</a></li>
-						<li><a href="/Qualification/profile">プロフィール画面</a></li>
+						<li><a href="/Qualification/Profile">プロフィール画面</a></li>
 					</ul>
-				</div>
+				</nav>
 				<!-- /#menu -->
 			</div>
 			<!-- /header -->

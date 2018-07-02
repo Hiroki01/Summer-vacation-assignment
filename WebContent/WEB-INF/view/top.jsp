@@ -5,10 +5,13 @@
 
 <head>
 <meta charset=UTF-8>
-<link rel="stylesheet" href="/Qualification/css/form.css"
+<link rel="stylesheet" href="/Qualification/css/table.css"
+	type="text/css" />
+<link rel="stylesheet" href="/Qualification/css/menu.css"
 	type="text/css" />
 <link rel="stylesheet" href="/Qualification/css/style.css"
 	type="text/css" />
+<script type="text/javascript" src="/Qualification/js/menu.js" /></script>
 <script type="text/javascript"
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <title>新規登録用画面（生徒用）</title>

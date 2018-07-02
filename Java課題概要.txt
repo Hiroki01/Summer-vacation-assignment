@@ -60,14 +60,19 @@ CREATE TABLE Admin (
 		pass VARCHAR(64) NOT NULL,
 		PRIMARY KEY (id));
 
+管理者ID
+管理者名前
+
 ・テーブル5（登録済み資格用）
 CREATE TABLE qua (
 		id INT(6) NOT NULL,
 		name VARCHAR(64) NOT NULL,
+		sponsorship VARCHAR(64) NOT NULL,
 		PRIMARY KEY (id));
+資格ID
+資格名
+主催
 
-管理者ID
-管理者名前
 
 ・その他必要情報
 INSERT INTO Student VALUES(4171128,'中村　宏紀','ナカムラ　ヒロキ','男',
@@ -76,10 +81,9 @@ INSERT INTO Teacher VALUES(101,'武田　陽太','タケダ　ヨウタ','raysay680@gmail.co
 INSERT INTO Admin VALUES(1,'ADMIN','magifes1231@gmail.com','got');
 INSERT INTO Qualification VALUES(1,'基本情報技術者','2018年4月15日',4171132,'不合格');
 
-mysql> insert into qua values(010001,'基本情報技術者');
-Query OK, 1 row affected (0.01 sec)
+insert into qua values(010001,'基本情報技術者'.'経済産業省');
+insert into qua values(010002,'応用情報技術者'.'経済産業省');
 
-mysql> insert into qua values(010002,'応用情報技術者');
 insert into student values(4171132,'平澤　惇哉','ヒラサワ　ジュンヤ','女','j.hirasawa1711@morijyobi.ac.jp','情報システム科','システムエンジニアコース',2,1,'keigo');
 
 ・実装したいもの
