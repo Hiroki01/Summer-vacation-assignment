@@ -8,7 +8,7 @@
 	type="text/css" />
 <link rel="stylesheet" href="/Qualification/css/style.css"
 	type="text/css" />
-<script type="text/javascript" src="/Qualification/js/menu.js">
+<script type="text/javascript" src="/Qualification/js/menu.js"></script>
 	<script>
 	$(document).ready(function() {
 		var pagetop = $('.pagetop');
