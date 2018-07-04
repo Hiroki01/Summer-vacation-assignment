@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.QualificationDAO;
-import dto.LoginDTO;
 import dto.QualificationDTO;
 
 /**
@@ -37,11 +36,10 @@ public class Update_qualifications extends HttpServlet {
 		re.setCharacterEncoding("UTF-8");
 		String view = null;
 		HttpSession s = re.getSession();
-		LoginDTO results;
+		int id;
 
 		try {
-			results = (LoginDTO) s.getAttribute("uesr");
-			int id = results.getId();
+			id = (int) s.getAttribute("id");
 			ArrayList<QualificationDTO> result = QualificationDAO.No(id);
 			re.setAttribute("mijuken", result);
 
@@ -50,14 +48,17 @@ public class Update_qualifications extends HttpServlet {
 			view = "/WEB-INF/view/smenu.jsp";
 			s.setAttribute("status", "No");
 			e.getStackTrace();
+			System.out.println(e);
 		} catch (NullPointerException e) {
 			view = "/WEB-INF/view/smenu.jsp";
 			s.setAttribute("status", "Null");
 			e.getStackTrace();
+			System.out.println(e);
 		} catch (Exception e) {
 			view = "/WEB-INF/view/smenu.jsp";
 			s.setAttribute("status", "Exception");
 			e.getStackTrace();
+			System.out.println(e);
 		} finally {
 			RequestDispatcher dispatcher = re.getRequestDispatcher(view);
 			dispatcher.forward(re, response);

@@ -16,7 +16,7 @@
 <script type="text/javascript" src="/Qualification/js/menu.js" /></script>
 <script type="text/javascript"
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<title>新規登録用画面（生徒用）</title>
+<title>所持資格一覧（合格のみ）</title>
 </head>
 
 <body>
@@ -42,6 +42,10 @@
 		<!-- /top-->
 		<div class="main">
 			<br>
+			<%ArrayList<QualificationDTO> re = (ArrayList<QualificationDTO>)request.getAttribute("goukaku");
+			if(re.isEmpty()){%>
+			<p>合格済み資格はありません。</p>
+			<%}else{ %>
 			<table class="example">
 
 				<caption>あなたの所持資格一覧</caption>
@@ -55,7 +59,7 @@
 				</thead>
 
 				<tbody>
-				<%ArrayList<QualificationDTO> re = (ArrayList<QualificationDTO>)request.getAttribute("goukaku");
+				<%
 				for(QualificationDTO anko : re){
 				%>
 					<tr>
@@ -67,6 +71,8 @@
 				</tbody>
 
 			</table>
+
+			<%} %>
 			<br>
 			<div id="bar"></div>
 		</div>

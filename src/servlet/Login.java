@@ -76,7 +76,7 @@ public class Login extends HttpServlet {
 			e.getStackTrace();
 		} catch (NullPointerException e) {
 			view = "/WEB-INF/view/top.jsp";
-			s.setAttribute("status", "Null");
+			s.setAttribute("status", "nai");
 			e.getStackTrace();
 		} catch (Exception e) {
 			view = "/WEB-INF/view/top.jsp";

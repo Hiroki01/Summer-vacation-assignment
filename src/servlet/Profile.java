@@ -1,7 +1,6 @@
 package servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -42,6 +41,8 @@ public class Profile extends HttpServlet {
 		try {
 			id = (int) s.getAttribute("id");
 			result = StudentDAO.search(id);
+			System.out.println(result.getId());
+			System.out.println(result.getGender());
 			re.setAttribute("pro", result);
 
 			view = "/WEB-INF/view/profile.jsp";

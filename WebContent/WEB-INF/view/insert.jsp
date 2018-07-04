@@ -15,7 +15,7 @@
 <script type="text/javascript" src="/Qualification/js/menu.js" /></script>
 <script type="text/javascript"
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<title>登録受験情報入力画面</title>
+<title>受験情報登録画面</title>
 </head>
 <body>
 	<div class="content">
@@ -51,7 +51,7 @@
 					<img src="/Qualification/image/required1.gif" alt="必須" width="26"
 						height="15"> マークの項目は入力必須となります。
 				</p>
-				<table>
+				<table class="example">
 					<tbody>
 						<tr>
 							<th><label for="name">受験資格名</label></th>
