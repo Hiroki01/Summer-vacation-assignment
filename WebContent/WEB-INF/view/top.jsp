@@ -30,42 +30,54 @@
 		</div>
 		<!-- /top-->
 		<div class="main">
-		<%
-		HttpSession sessions = request.getSession(true);
+			<%
+				HttpSession sessions = request.getSession(true);
 
-		/* 認証失敗から呼び出されたのかどうか */
-		Object status = session.getAttribute("status");
+				/* 認証失敗から呼び出されたのかどうか */
+				Object status = session.getAttribute("status");
 
-		while (status != null) {
-			if (status.equals("NO")) {
-	%>
-	<p>
-		IDが数値型ではないです。<br> 再度IDを数値型に直して入力してください。
-	</p>
-	<%
-		session.setAttribute("status", null);
-				break;
-			} else if (status.equals("nai")) {
-	%>
-	<p>存在しないユーザです。</p>
-	<%
-		session.setAttribute("status", null);
-				break;
-			} else if (status.equals("Exception")) {
-	%>
-	<p>エラーが発生しました。</p>
-	<%
-		session.setAttribute("status", null);
-				break;
-			}
-		}
-	%>
+				while (status != null) {
+					if (status.equals("NO")) {
+			%>
+			<p>
+				IDが数値型ではないです。<br> 再度IDを数値型に直して入力してください。
+			</p>
+			<%
+				session.setAttribute("status", null);
+						break;
+					} else if (status.equals("nai")) {
+			%>
+			<p>存在しないユーザです。</p>
+			<%
+				session.setAttribute("status", null);
+						break;
+					} else if (status.equals("Exception")) {
+			%>
+			<p>エラーが発生しました。</p>
+			<%
+				session.setAttribute("status", null);
+						break;
+					}
+				}
+			%>
 			<br>
+
 			<form action="/Qualification/Login" method="post">
-				<p>ログイン画面</p>
-				ユーザID:<input type="text" name="id" required><br> パスワード:<input
-					type="password" name="pass" required><br> <input
-					type="submit" value="ログイン"><br>
+				<table class="example">
+					<caption>ログイン画面</caption>
+					<tbody>
+						<tr>
+							<td>ユーザID</td><td class="arbitrary"><img
+								src="/Qualification/image/required1.gif" alt="必須" width="26"
+								height="15"></td><td><input type="text" name="id" required></td>
+							</tr><tr>
+							<td>パスワード</td><td class="arbitrary"><img
+								src="/Qualification/image/required1.gif" alt="必須" width="26"
+								height="15"></td><td><input type="password" name="pass" required></td>					<tr>
+
+					</tbody>
+					</table>
+						<input type="submit" value="ログイン">
 			</form>
 			<a href="/Qualification/Add">新規ユーザー登録（生徒用）</a> <br>
 			<div id="bar"></div>

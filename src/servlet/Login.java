@@ -64,6 +64,7 @@ public class Login extends HttpServlet {
 					}else{
 						view = "/WEB-INF/view/top.jsp";
 					}
+				// 管理者用
 			}
 			int id1 = result.getId();
 			String pass1 = result.getPass();
@@ -74,14 +75,17 @@ public class Login extends HttpServlet {
 			view = "/WEB-INF/view/top.jsp";
 			s.setAttribute("status", "No");
 			e.getStackTrace();
+			System.out.println(e);
 		} catch (NullPointerException e) {
 			view = "/WEB-INF/view/top.jsp";
 			s.setAttribute("status", "nai");
 			e.getStackTrace();
+			System.out.println(e);
 		} catch (Exception e) {
 			view = "/WEB-INF/view/top.jsp";
 			s.setAttribute("status", "Exception");
 			e.getStackTrace();
+			System.out.println(e);
 		} finally {
 			RequestDispatcher dispatcher = re.getRequestDispatcher(view);
 			dispatcher.forward(re, response);
