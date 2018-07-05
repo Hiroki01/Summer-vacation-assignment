@@ -57,7 +57,7 @@
 		<div id="top">
 			<div class="header">
 				<h1>
-					<a href="/Qualification/TopShow">資格取得状況一見</a>
+					<a href="/Qualification/Smenu">資格取得状況一見</a>
 				</h1>
 				<nav id="menubar">
 					<ul>
