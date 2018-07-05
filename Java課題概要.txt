@@ -95,6 +95,7 @@ insert into student values(4171132,'平澤　惇哉','ヒラサワ　ジュンヤ','女','j.hir
 受験資格登録〇
 受験資格一覧〇
 合格のみ表示〇
+受験結果更新
 プロフィール画面変更
 教師
 受験結果検索（ユーザ無差別）
@@ -109,9 +110,11 @@ insert into student values(4171132,'平澤　惇哉','ヒラサワ　ジュンヤ','女','j.hir
 ユーザ更新
 データベース変更
 オリジナル機能
+
 css
 js
 追加予定
 
 git clone https://Hiroki01@bitbucket.org/Hiroki01/summer.git
+
 https://bitbucket.org/Hiroki01/summer/src/master/
