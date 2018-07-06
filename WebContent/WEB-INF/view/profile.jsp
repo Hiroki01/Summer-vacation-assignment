@@ -56,49 +56,15 @@
 		</div>
 		<!-- /top-->
 		<div class="main">
-			<br>
-			<div class="section">
-				<div class="inner">
-					<h3>お知らせボックス</h3>
-					<ul>
-						<li>書くことねぇ（ ＾ω＾）</li>
-						<li>プロフ設定事項変更</li>
-						<li>資格類追加中</li>
-						<li>DEMOはじめました</li>
-					</ul>
+			<table class="example" id="TBL">
 
-				</div>
-			</div>
-			<br>
-			<div class="heading">
-				<h1>生徒用資格情報閲覧ページについて</h1>
-			</div>
-			<!-- heading -->
-			<p>
-				生徒用の資格情報登録、更新ページとなっています。<br> このまま各種ページの説明に移ります。
-			</p>
-			<br>
-			<div class="heading">
-				<h1>所持資格一覧</h1>
-			</div>
-			<!-- heading -->
-			<p>自分の持っている資格を確認することができます。</p>
-			<br>
-			<div class="heading">
-				<h1>所持資格検索(特定）</h1>
-			</div>
-			<!-- heading -->
-			<p>資格名を検索窓に入れることでその情報だけを取り出すことができます。</p>
-			<br>
-			<div class="heading">
-				<h1>プロフィール画面について</h1>
-			</div>
-			<!-- heading -->
-			<p>
-				基本的な情報の書き換えができます。<br> IDの書き換えにつきましては、先生に依頼してください。
-			</p>
-			<br> <br> <br>
+				<caption>受験結果未更新リスト</caption>
 
+				<thead>
+
+				</thead>
+
+				</table>
 			<div id="bar"></div>
 		</div>
 		<!--main-->
