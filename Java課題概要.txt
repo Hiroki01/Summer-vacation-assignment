@@ -1,4 +1,4 @@
-Eƒe[ƒuƒ‹‚Pi¶“k—pj
+ï»¿ãƒ»ãƒ†ãƒ¼ãƒ–ãƒ«ï¼‘ï¼ˆç”Ÿå¾’ç”¨ï¼‰
 CREATE TABLE Student (
 		id INT(9) NOT NULL,
 		name VARCHAR(64) NOT NULL,
@@ -12,18 +12,18 @@ CREATE TABLE Student (
 		pass VARCHAR(64) NOT NULL,
 		PRIMARY KEY (id));
 
-¶“kID
-–¼‘O
-–¼‘O(ƒJƒ^ƒJƒij
-«•Ê
-ƒ[ƒ‹ƒAƒhƒŒƒX
-Šw‰È
-ƒR[ƒX
-Šw”N
-‘g
-ƒpƒXƒ[ƒh
+ç”Ÿå¾’ID
+åå‰
+åå‰(ã‚«ã‚¿ã‚«ãƒŠï¼‰
+æ€§åˆ¥
+ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹
+å­¦ç§‘
+ã‚³ãƒ¼ã‚¹
+å­¦å¹´
+çµ„
+ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰
 
-Eƒe[ƒuƒ‹‚Qi‹³Žt—pj
+ãƒ»ãƒ†ãƒ¼ãƒ–ãƒ«ï¼’ï¼ˆæ•™å¸«ç”¨ï¼‰
 CREATE TABLE Teacher (
 		id INT(9) NOT NULL,
 		name VARCHAR(64) NOT NULL,
@@ -32,13 +32,13 @@ CREATE TABLE Teacher (
 		pass VARCHAR(64) NOT NULL,
 		PRIMARY KEY (id));
 
-‹³ŽtID
-–¼‘O
-–¼‘OiƒJƒ^ƒJƒij
-ƒ[ƒ‹ƒAƒhƒŒƒX
-ƒpƒXƒ[ƒh
+æ•™å¸«ID
+åå‰
+åå‰ï¼ˆã‚«ã‚¿ã‚«ãƒŠï¼‰
+ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹
+ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰
 
-Eƒe[ƒuƒ‹‚RiŽ‘Šiî•ñ—pj
+ãƒ»ãƒ†ãƒ¼ãƒ–ãƒ«ï¼“ï¼ˆè³‡æ ¼æƒ…å ±ç”¨ï¼‰
 CREATE TABLE Qualification(
 		id INT(6) NOT NULL AUTO_INCREMENT,	
 		name VARCHAR(64) NOT NULL,
@@ -47,12 +47,12 @@ CREATE TABLE Qualification(
 		result VARCHAR(3) NOT NULL,
 		PRIMARY KEY (id));
 ID
-Ž‘Ši–¼
-ŽóŒ±“ú
-¶“kiŠwÐ”Ô†jID
-ŽóŒ±Œ‹‰Êi‡ŠiA•s‡ŠiA–¢ŽóŒ±j
+è³‡æ ¼å
+å—é¨“æ—¥
+ç”Ÿå¾’ï¼ˆå­¦ç±ç•ªå·ï¼‰ID
+å—é¨“çµæžœï¼ˆåˆæ ¼ã€ä¸åˆæ ¼ã€æœªå—é¨“ï¼‰
 
-Eƒe[ƒuƒ‹‚SiŠÇ—ŽÒ—pj
+ãƒ»ãƒ†ãƒ¼ãƒ–ãƒ«ï¼”ï¼ˆç®¡ç†è€…ç”¨ï¼‰
 CREATE TABLE Admin (
 		id INT(9) NOT NULL,
 		name VARCHAR(64) NOT NULL,
@@ -60,60 +60,60 @@ CREATE TABLE Admin (
 		pass VARCHAR(64) NOT NULL,
 		PRIMARY KEY (id));
 
-ŠÇ—ŽÒID
-ŠÇ—ŽÒ–¼‘O
+ç®¡ç†è€…ID
+ç®¡ç†è€…åå‰
 
-Eƒe[ƒuƒ‹5i“o˜^Ï‚ÝŽ‘Ši—pj
+ãƒ»ãƒ†ãƒ¼ãƒ–ãƒ«5ï¼ˆç™»éŒ²æ¸ˆã¿è³‡æ ¼ç”¨ï¼‰
 CREATE TABLE qua (
 		id INT(6) NOT NULL,
 		name VARCHAR(64) NOT NULL,
 		sponsorship VARCHAR(64) NOT NULL,
 		PRIMARY KEY (id));
-Ž‘ŠiID
-Ž‘Ši–¼
-ŽåÃ
+è³‡æ ¼ID
+è³‡æ ¼å
+ä¸»å‚¬
 
 
-E‚»‚Ì‘¼•K—vî•ñ
-INSERT INTO Student VALUES(4171128,'’†‘º@G‹I','ƒiƒJƒ€ƒ‰@ƒqƒƒL','’j',
-'magifes1231@gmail.com','î•ñƒVƒXƒeƒ€‰È','ƒVƒXƒeƒ€ƒGƒ“ƒWƒjƒAƒR[ƒX',2,1,'pass');
-INSERT INTO Teacher VALUES(101,'•“c@—z‘¾','ƒ^ƒPƒ_@ƒˆƒEƒ^','raysay680@gmail.com','cat');
+ãƒ»ãã®ä»–å¿…è¦æƒ…å ±
+INSERT INTO Student VALUES(4171128,'ä¸­æ‘ã€€å®ç´€','ãƒŠã‚«ãƒ ãƒ©ã€€ãƒ’ãƒ­ã‚­','ç”·',
+'magifes1231@gmail.com','æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ ç§‘','ã‚·ã‚¹ãƒ†ãƒ ã‚¨ãƒ³ã‚¸ãƒ‹ã‚¢ã‚³ãƒ¼ã‚¹',2,1,'pass');
+INSERT INTO Teacher VALUES(101,'æ­¦ç”°ã€€é™½å¤ª','ã‚¿ã‚±ãƒ€ã€€ãƒ¨ã‚¦ã‚¿','raysay680@gmail.com','cat');
 INSERT INTO Admin VALUES(1,'ADMIN','magifes1231@gmail.com','got');
-INSERT INTO Qualification VALUES(1,'Šî–{î•ñ‹ZpŽÒ','2018”N4ŒŽ15“ú',4171132,'•s‡Ši');
+INSERT INTO Qualification VALUES(1,'åŸºæœ¬æƒ…å ±æŠ€è¡“è€…','2018å¹´4æœˆ15æ—¥',4171132,'ä¸åˆæ ¼');
 
-insert into qua values(010001,'Šî–{î•ñ‹ZpŽÒ','ŒoÏŽY‹ÆÈ');
-insert into qua values(010002,'‰ž—pî•ñ‹ZpŽÒ','ŒoÏŽY‹ÆÈ');
+insert into qua values(010001,'åŸºæœ¬æƒ…å ±æŠ€è¡“è€…','çµŒæ¸ˆç”£æ¥­çœ');
+insert into qua values(010002,'å¿œç”¨æƒ…å ±æŠ€è¡“è€…','çµŒæ¸ˆç”£æ¥­çœ');
 
-insert into student values(4171132,'•½àV@“ÕÆ','ƒqƒ‰ƒTƒ@ƒWƒ…ƒ“ƒ„','—','j.hirasawa1711@morijyobi.ac.jp','î•ñƒVƒXƒeƒ€‰È','ƒVƒXƒeƒ€ƒGƒ“ƒWƒjƒAƒR[ƒX',2,1,'keigo');
+insert into student values(4171132,'å¹³æ¾¤ã€€æƒ‡å“‰','ãƒ’ãƒ©ã‚µãƒ¯ã€€ã‚¸ãƒ¥ãƒ³ãƒ¤','å¥³','j.hirasawa1711@morijyobi.ac.jp','æƒ…å ±ã‚·ã‚¹ãƒ†ãƒ ç§‘','ã‚·ã‚¹ãƒ†ãƒ ã‚¨ãƒ³ã‚¸ãƒ‹ã‚¢ã‚³ãƒ¼ã‚¹',2,1,'keigo');
 
-EŽÀ‘•‚µ‚½‚¢‚à‚Ì
-ƒƒOƒCƒ“iƒZƒbƒVƒ‡ƒ“ˆ—j
-ƒ†[ƒU“o˜^i¶“k—pjZ
-ƒ†[ƒU“o˜^i‹³Žt—p‚ÍŠÇ—ŽÒ‚Ì‚ÝŽÀs‰Â”\j
-ŠÇ—ŽÒ“o˜^‚ÍƒRƒ}ƒ“ƒhƒvƒƒ“ƒvƒg‚©‚ç‚Ì‚Ý
-¶“k
-ŽóŒ±Ž‘Ši“o˜^Z
-ŽóŒ±Ž‘Šiˆê——Z
-‡Ši‚Ì‚Ý•\Ž¦Z
-ŽóŒ±Œ‹‰ÊXV
-ƒvƒƒtƒB[ƒ‹‰æ–Ê•ÏX
-‹³Žt
-ŽóŒ±Œ‹‰ÊŒŸõiƒ†[ƒU–³·•Êj
-ŽóŒ±Œ‹‰Êˆê——
-ŽóŒ±Œ‹‰ÊŒŸõiƒ†[ƒUŒÂ•Êj
-Šw”N‚²‚ÆŒŸõ
-ƒNƒ‰ƒX‚²‚ÆŒŸõ
-ƒf[ƒ^CSV‚ÉŠÖ‚µ‚Ä‚Íæ¶‚ÉŠm”F
-ŠÇ—ŽÒ
-‹³Žt“o˜^
-ƒ†[ƒUíœ
-ƒ†[ƒUXV
-ƒf[ƒ^ƒx[ƒX•ÏX
-ƒIƒŠƒWƒiƒ‹‹@”\
+ãƒ»å®Ÿè£…ã—ãŸã„ã‚‚ã®
+ãƒ­ã‚°ã‚¤ãƒ³ï¼ˆã‚»ãƒƒã‚·ãƒ§ãƒ³å‡¦ç†ï¼‰
+ãƒ¦ãƒ¼ã‚¶ç™»éŒ²ï¼ˆç”Ÿå¾’ç”¨ï¼‰ã€‡
+ãƒ¦ãƒ¼ã‚¶ç™»éŒ²ï¼ˆæ•™å¸«ç”¨ã¯ç®¡ç†è€…ã®ã¿å®Ÿè¡Œå¯èƒ½ï¼‰
+ç®¡ç†è€…ç™»éŒ²ã¯ã‚³ãƒžãƒ³ãƒ‰ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆã‹ã‚‰ã®ã¿
+ç”Ÿå¾’
+å—é¨“è³‡æ ¼ç™»éŒ²ã€‡
+å—é¨“è³‡æ ¼ä¸€è¦§ã€‡
+åˆæ ¼ã®ã¿è¡¨ç¤ºã€‡
+å—é¨“çµæžœæ›´æ–°
+ãƒ—ãƒ­ãƒ•ã‚£ãƒ¼ãƒ«ç”»é¢å¤‰æ›´
+æ•™å¸«
+å—é¨“çµæžœæ¤œç´¢ï¼ˆãƒ¦ãƒ¼ã‚¶ç„¡å·®åˆ¥ï¼‰
+å—é¨“çµæžœä¸€è¦§
+å—é¨“çµæžœæ¤œç´¢ï¼ˆãƒ¦ãƒ¼ã‚¶å€‹åˆ¥ï¼‰
+å­¦å¹´ã”ã¨æ¤œç´¢
+ã‚¯ãƒ©ã‚¹ã”ã¨æ¤œç´¢
+ãƒ‡ãƒ¼ã‚¿CSVã«é–¢ã—ã¦ã¯å…ˆç”Ÿã«ç¢ºèª
+ç®¡ç†è€…
+æ•™å¸«ç™»éŒ²
+ãƒ¦ãƒ¼ã‚¶å‰Šé™¤
+ãƒ¦ãƒ¼ã‚¶æ›´æ–°
+ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹å¤‰æ›´
+ã‚ªãƒªã‚¸ãƒŠãƒ«æ©Ÿèƒ½
 
 css
 js
-’Ç‰Á—\’è
+è¿½åŠ äºˆå®š
 
 git clone https://Hiroki01@bitbucket.org/Hiroki01/summer.git
 
