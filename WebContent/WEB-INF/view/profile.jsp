@@ -3,62 +3,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=UTF-8>
-<link rel="stylesheet" href="/Qualification/css/menu.css"
+<title>個人情報更新画面</title>
+<meta content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/Qualification/css/table.css"
 	type="text/css" />
-<link rel="stylesheet" href="/Qualification/css/style.css"
-	type="text/css" />
-<script type="text/javascript" src="/Qualification/js/menu.js"></script>
-	<script>
-	$(document).ready(function() {
-		var pagetop = $('.pagetop');
-		$(window).scroll(function() {
-			if ($(this).scrollTop() > 100) {
-				pagetop.fadeIn();
-			} else {
-				pagetop.fadeOut();
-			}
-		});
-		pagetop.click(function() {
-			$('body, html').animate({
-				scrollTop : 0
-			}, 100);
-			return false;
-		});
-	});
-</script>
-<script type="text/javascript"
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<title>プロフィール</title>
+<link rel="stylesheet" href="/Qualification/css/style.css">
+<!-- drawer.css -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
+<!-- jquery & iScroll -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+<!-- drawer.js -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
+<script type="text/javascript" src="js/openclose.js"></script>
 </head>
-<body>
-<p class="pagetop">
-		<a href="#content">トップへ</a>
-	</p>
-	<div class="content">
-		<div id="top">
-			<div class="header">
-				<h1>
-					<a href="/Qualification/Smenu">資格取得状況一見</a>
-				</h1>
-				<nav id="menubar">
-					<ul>
-						<li  class="current"><a href="/Qualification/All_qualifications">受験資格一覧</a></li>
-						<li><a href="/Qualification/Search_qualifications">所持資格検索</a></li>
-						<li><a href="/Qualification/Insert_qualifications">受験資格登録</a></li>
-						<li><a href="/Qualification/Update_qualifications">受験結果更新</a></li>
-						<li><a href="/Qualification/Profile">プロフィール画面</a></li>
-					</ul>
-				</nav>
-				<!-- /#menu -->
-			</div>
-			<!-- /header -->
-		</div>
-		<!-- /top-->
-		<div class="main">
+
+<body class="drawer drawer--left">
+	<header role="banner">
+		<button type="button" class="drawer-toggle drawer-hamburger"
+			style="background-color: gray">
+			<span class="sr-only" style="color: aqua">toggle navigation</span> <span
+				class="drawer-hamburger-icon" style="color: white"></span>
+		</button>
+		<nav class="drawer-nav" role="navigation" id="menubar">
+			<ul class="drawer-menu">
+				<li><a class="drawer-brand" href="#">MENU</a></li>
+				<li><a class="drawer-menu-item"
+					href="/Qualification/Insert_qualifications"><span>INSERT</span>受験予定登録</a></li>
+				<li><a class="drawer-menu-item"
+					href="/Qualification/Search_qualifications"><span>HAVE</span>合格済み資格</a></li>
+				<li><a class="drawer-menu-item"
+					href="/Qualification/Update_qualifications"><span>UPDATE</span>受験結果更新</a></li>
+				<li><a class="drawer-menu-item"
+					href="/Qualification/All_qualifications"><span>ALL</span>受験済み一覧</a></li>
+				<li><a class="drawer-menu-item" href="/Qualification/Profile"><span>PROFILE</span>プロフィール</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main role="main"> <!-- Page content --> </main>
+
+	<script>
+        $(document).ready(function() {
+            $('.drawer').drawer();
+        });
+
+    </script>
+	<div id="container">
+
+		<div id="main">
 			<table class="example" id="TBL">
 
-				<caption>受験結果未更新リスト</caption>
+				<caption>プロフィール情報変更</caption>
 
 				<thead>
 
@@ -68,18 +68,34 @@
 			<div id="bar"></div>
 		</div>
 		<!--main-->
-	</div>
-	<!--contents-->
-	<footer class="footer">
-		<small>&copy; 1999-<span id="thisYear"></span> hirasawa junjun
-		</small>
+	<p id="pagetop">
+			<a href="#">↑</a>
+		</p>
 
-		<script type="text/javascript">
-			date = new Date();
-			thisYear = date.getFullYear();
-			document.getElementById("thisYear").innerHTML = thisYear;
-		</script>
-	</footer>
+		<footer>
+			<small>&copy; 1999-<span id="thisYear"></span> hirasawa
+				junjun
+			</small>
+		</footer>
+
+	</div>
+	<!--/container-->
+
+	<script type="text/javascript">
+        date = new Date();
+        thisYear = date.getFullYear();
+        document.getElementById("thisYear").innerHTML = thisYear;
+
+    </script>
+
+
+	<script type="text/javascript">
+        if (OCwindowWidth() <= 800) {
+            open_close("newinfo_hdr", "newinfo");
+        }
+
+    </script>
 
 </body>
+
 </html>

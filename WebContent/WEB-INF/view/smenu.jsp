@@ -1,121 +1,147 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
-<title>生徒用ページ</title>
+<title>生徒用メニュー</title>
 <meta content="text/html; charset=utf-8">
-<link rel="stylesheet" href="/Qualification/css/menu.css"
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/Qualification/css/table.css"
 	type="text/css" />
-<link rel="stylesheet" href="/Qualification/css/style.css"
-	type="text/css" />
-<script type="text/javascript" src="/Qualification/js/menu.js">
-	<script>
-	$(document).ready(function() {
-		var pagetop = $('.pagetop');
-		$(window).scroll(function() {
-			if ($(this).scrollTop() > 100) {
-				pagetop.fadeIn();
-			} else {
-				pagetop.fadeOut();
-			}
-		});
-		pagetop.click(function() {
-			$('body, html').animate({
-				scrollTop : 0
-			}, 100);
-			return false;
-		});
-	});
-</script>
-<script type="text/javascript"
-	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<link rel="stylesheet" href="/Qualification/css/style.css">
+<!-- drawer.css -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
+<!-- jquery & iScroll -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+<!-- drawer.js -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
+<script type="text/javascript" src="js/openclose.js"></script>
 </head>
 
-<body>
-	<p class="pagetop">
-		<a href="#content">トップ</a>
-	</p>
-	<div class="content">
-		<div id="top">
-			<div class="header">
-				<h1>
-					<a href="/Qualification/Smenu">資格取得状況一見</a>
-				</h1>
-				<nav id="menubar">
-					<ul>
-						<li  class="current"><a href="/Qualification/All_qualifications">受験資格一覧</a></li>
-						<li><a href="/Qualification/Search_qualifications">所持資格検索</a></li>
-						<li><a href="/Qualification/Insert_qualifications">受験資格登録</a></li>
-						<li><a href="/Qualification/Update_qualifications">受験結果更新</a></li>
-						<li><a href="/Qualification/Profile">プロフィール画面</a></li>
-					</ul>
-				</nav>
-				<!-- /#menu -->
-			</div>
-			<!-- /header -->
-		</div>
-		<!-- /top-->
-		<div class="main">
-			<br>
-			<div class="section">
-				<div class="inner">
-					<h3>お知らせボックス</h3>
-					<ul>
-						<li>書くことねぇ（ ＾ω＾）</li>
-						<li>プロフ設定事項変更</li>
-						<li>資格類追加中</li>
-						<li>DEMOはじめました</li>
-					</ul>
+<body class="drawer drawer--left">
+	<header role="banner">
+		<button type="button" class="drawer-toggle drawer-hamburger"
+			style="background-color: gray">
+			<span class="sr-only" style="color: aqua">toggle navigation</span> <span
+				class="drawer-hamburger-icon" style="color: white"></span>
+		</button>
+		<nav class="drawer-nav" role="navigation" id="menubar">
+			<ul class="drawer-menu">
+				<li><a class="drawer-brand" href="#">MENU</a></li>
+				<li><a class="drawer-menu-item"
+					href="/Qualification/Insert_qualifications"><span>INSERT</span>受験予定登録</a></li>
+				<li><a class="drawer-menu-item"
+					href="/Qualification/Search_qualifications"><span>HAVE</span>合格済み資格</a></li>
+				<li><a class="drawer-menu-item"
+					href="/Qualification/Update_qualifications"><span>UPDATE</span>受験結果更新</a></li>
+				<li><a class="drawer-menu-item"
+					href="/Qualification/All_qualifications"><span>ALL</span>受験済み一覧</a></li>
+				<li><a class="drawer-menu-item" href="/Qualification/Profile"><span>PROFILE</span>プロフィール</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main role="main"> <!-- Page content --> </main>
 
-				</div>
-			</div>
-			<br>
-			<div class="heading">
-				<h1>生徒用資格情報閲覧ページについて</h1>
-			</div>
-			<!-- heading -->
-			<p>
-				生徒用の資格情報登録、更新ページとなっています。<br> このまま各種ページの説明に移ります。
-			</p>
-			<br>
-			<div class="heading">
-				<h1>所持資格一覧</h1>
-			</div>
-			<!-- heading -->
-			<p>自分の持っている資格を確認することができます。</p>
-			<br>
-			<div class="heading">
-				<h1>所持資格検索(特定）</h1>
-			</div>
-			<!-- heading -->
-			<p>資格名を検索窓に入れることでその情報だけを取り出すことができます。</p>
-			<br>
-			<div class="heading">
-				<h1>プロフィール画面について</h1>
-			</div>
-			<!-- heading -->
-			<p>
-				基本的な情報の書き換えができます。<br> IDの書き換えにつきましては、先生に依頼してください。
-			</p>
-			<br> <br> <br>
+	<script>
+        $(document).ready(function() {
+            $('.drawer').drawer();
+        });
 
-			<div id="bar"></div>
+    </script>
+	<div id="container">
+
+		<div id="main">
+
+			<section id="new" class="box">
+				<h2 id="newinfo_hdr" class="close">
+					<span>更新情報・お知らせ</span>
+				</h2>
+				<dl id="newinfo">
+					<dt>2018/07/11</dt>
+					<dd>
+						試作なう<span class="newicon">NEW</span>
+					</dd>
+					<dt>2018/00/00</dt>
+					<dd>書くことないよねぇ</dd>
+					<dt>2018/00/00</dt>
+					<dd>書くことないよねぇ</dd>
+					<dt>2018/00/00</dt>
+					<dd>書くことないよねぇ</dd>
+					<dt>2018/00/00</dt>
+					<dd>書くことないよねぇ</dd>
+					<dt>2018/00/00</dt>
+					<dd>書くことないよねぇ</dd>
+				</dl>
+			</section>
+
+			<section class="box">
+
+				<h2>
+					<span>使用方法等</span>必読
+				</h2>
+
+				<h3>受験予定登録</h3>
+				<p>
+					受験予定の資格を登録することができます。<br>間違えると更新できませんので確認をしっかり行ってください。
+				</p>
+
+				<h3 class="color1">合格済み資格</h3>
+				<p>
+					合格している資格のみを表示するページです。<br>次受験の資格の参考にしてください。
+				</p>
+
+				<h3>受験結果更新</h3>
+				<p>受験予定登録ページで登録してあり、受験結果が出たものだけ更新してください。</p>
+
+				<h3>受験済み一覧</h3>
+				<p>
+					受験登録をしたものが全て表示されます。<br>不合格、未受験も対象です。
+				</p>
+				<h3>プロフィール</h3>
+				<p>
+					登録アカウント情報の変更を行えるページです。<br>登録ID（学籍番号）は変更できないので、変更したい場合は担当教師に依頼してください。
+				</p>
+
+			</section>
 		</div>
-		<!--main-->
+		<!--/main-->
+
+
+
+		<p id="pagetop">
+			<a href="#">↑</a>
+		</p>
+
+		<footer>
+			<small>&copy; 1999-<span id="thisYear"></span> hirasawa
+				junjun
+			</small>
+		</footer>
+
 	</div>
-	<!--contents-->
-	<footer class="footer">
-		<small>&copy; 1999-<span id="thisYear"></span> hirasawa junjun
-		</small>
+	<!--/container-->
 
-		<script type="text/javascript">
-			date = new Date();
-			thisYear = date.getFullYear();
-			document.getElementById("thisYear").innerHTML = thisYear;
-		</script>
-	</footer>
+	<script type="text/javascript">
+        date = new Date();
+        thisYear = date.getFullYear();
+        document.getElementById("thisYear").innerHTML = thisYear;
+
+    </script>
+
+
+	<script type="text/javascript">
+        if (OCwindowWidth() <= 800) {
+            open_close("newinfo_hdr", "newinfo");
+        }
+
+    </script>
+
 </body>
 
 </html>
