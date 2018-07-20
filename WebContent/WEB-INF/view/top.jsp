@@ -54,8 +54,8 @@
 					}
 				}
 			%>
-			<br>
-
+			<section id="new" class="box">
+				<h2 id="newinfo_hdr" class="close"></h2>
 			<form action="/Qualification/Login" method="post">
 				<table class="example">
 					<caption>ログイン画面</caption>
@@ -73,8 +73,9 @@
 					</table>
 						<input type="submit" value="ログイン">
 			</form>
+
 			<a href="/Qualification/Add">新規ユーザー登録（生徒用）</a> <br>
-			<div id="bar"></div>
+			</section>
 		</div>
 		<!--main-->
 		<footer>
