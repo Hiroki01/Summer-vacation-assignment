@@ -45,12 +45,6 @@ a img:hover {
 	opacity: 0.7;
 }
 
-table {
-	border-collapse: collapse;
-	font-size: 100%;
-	border-spacing: 0;
-}
-
 iframe {
 	width: 100%;
 }

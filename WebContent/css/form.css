@@ -60,7 +60,7 @@ margin-bottom: 2px;
 
 #id, #name, #gender, #email,#department,
 #course, #gaku,#set_in,#pass {
-width: 350px;
+width: 380px;
 }
 
 #message {
@@ -72,4 +72,6 @@ form.contact p.button {
 margin: 20px 0 0;
 text-align: center;
 }
-
+input[type="email"] {
+	width:260px;
+}

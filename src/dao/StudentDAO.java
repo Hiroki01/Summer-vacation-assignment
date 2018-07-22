@@ -113,4 +113,65 @@ public class StudentDAO {
 		return result;
 	}
 
+	public static StudentDTO update(int id, String name, String namek, String gender, String email, String department,
+			String course, String school_year, String set_in, String pass) {
+		StudentDTO result = null;
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Qualification?useSSL=false", "got", "pass");
+			String sql1 = "UPDATE Student SET name = ? ,namek = ? ,gender = ? , email = ?,department=? ,course=?,school_year=?,set_in=?,pass=? WHERE id = ?;";
+			ps = con.prepareStatement(sql1);
+
+
+			ps.setString(1, name);
+			ps.setString(2, namek);
+			ps.setString(3, gender);
+			ps.setString(4, email);
+			ps.setString(5,department );
+			ps.setString(6, course);
+			ps.setString(7, school_year);
+			ps.setString(8, set_in);
+			ps.setString(9, pass);
+			ps.setInt(10,id);
+
+			ps.executeUpdate();
+			result = new StudentDTO(id,name, namek, gender, email, department, course, school_year, set_in, pass);
+
+		} catch (SQLException e) {
+			System.out.println("DBアクセスに失敗しました。");
+			e.printStackTrace();
+		} catch (Exception e) {
+			System.out.println("数字を指定してください。");
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+			} catch (SQLException e) {
+				System.out.println("DB切断時にエラーが発生しました。");
+				e.printStackTrace();
+			}
+			try {
+				if (ps != null) {
+					ps.close();
+				}
+			} catch (SQLException e) {
+				System.out.println("DB切断時にエラーが発生しました。");
+				e.printStackTrace();
+			}
+			try {
+				if (con != null) {
+					con.close();
+				}
+			} catch (SQLException e) {
+				System.out.println("DB切断時にエラーが発生しました。");
+				e.printStackTrace();
+			}
+		}
+		return result;
+	}
+
 }

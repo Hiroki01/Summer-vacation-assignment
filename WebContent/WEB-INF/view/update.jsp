@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="/Qualification/css/table.css"
 	type="text/css" />
 <link rel="stylesheet" href="/Qualification/css/style.css">
+<link rel="stylesheet" href="/Qualification/css/form.css">
 <!-- drawer.css -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
