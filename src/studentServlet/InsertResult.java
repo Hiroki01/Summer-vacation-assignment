@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.QualificationDAO;
-import dto.QualificationDTO;
+import studentDAO.StudentQualificationDAO;
+import studentDTO.StudentQualificationDTO;
 
 /**
  * Servlet implementation class InsertResult
@@ -48,7 +48,7 @@ public class InsertResult extends HttpServlet {
 			String date = year + "年" + month + "月" + day + "日";
 			String result = "未受験";
 
-			QualificationDTO resa = QualificationDAO.Insert(id, name, date, sid, result);
+			StudentQualificationDTO resa = StudentQualificationDAO.Insert(id, name, date, sid, result);
 			re.setAttribute("in", resa);
 			view = "/WEB-INF/student/insertResult.jsp";
 		} catch (NumberFormatException e) {

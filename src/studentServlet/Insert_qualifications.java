@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.QuaDAO;
-import dto.QuaDTO;
+import commonDAO.QuaDAO;
+import commonDTO.QuaDTO;
 
 /**
  * Servlet implementation class Insert_qualifications

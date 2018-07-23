@@ -1,4 +1,4 @@
-package dao;
+package commonDAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import dto.QuaDTO;
+import commonDTO.QuaDTO;
 
 public class QuaDAO {
 	public static ArrayList<QuaDTO> all() {// ここだけquaテーブル

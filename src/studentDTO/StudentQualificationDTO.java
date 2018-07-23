@@ -1,13 +1,13 @@
-package dto;
+package studentDTO;
 
-public class QualificationDTO {
+public class StudentQualificationDTO {
 	private int id;
 	private String name;
 	private String date;
 	private int sid;
 	private String result;
 
-	public QualificationDTO(int id, String name, String date, int sid, String result) {
+	public StudentQualificationDTO(int id, String name, String date, int sid, String result) {
 		this.id = id;
 		this.name = name;
 		this.date = date;

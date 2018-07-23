@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.QualificationDAO;
-import dto.QualificationDTO;
+import studentDAO.StudentQualificationDAO;
+import studentDTO.StudentQualificationDTO;
 
 /**
  * Servlet implementation class All_qualifications
@@ -40,7 +40,7 @@ public class All_qualifications extends HttpServlet {
 
 		try{
 			id = (int) s.getAttribute("id");
-			ArrayList<QualificationDTO> result = QualificationDAO.searchid(id);
+			ArrayList<StudentQualificationDTO> result = StudentQualificationDAO.searchid(id);
 			re.setAttribute("result", result);
 
 			view = "/WEB-INF/student/all.jsp";

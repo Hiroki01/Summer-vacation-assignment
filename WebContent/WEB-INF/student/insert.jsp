@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
-<%@ page import="dto.QuaDTO"%>
+<%@ page import="commonDTO.QuaDTO"%>
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,4 +1,4 @@
-package dao;
+package studentDAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,12 +7,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import dto.QualificationDTO;
+import studentDTO.StudentQualificationDTO;
 
-public class QualificationDAO {
+public class StudentQualificationDAO {
 
-	public static ArrayList<QualificationDTO> searchid(int key) {
-		ArrayList<QualificationDTO> resultList = new ArrayList<QualificationDTO>();
+	public static ArrayList<StudentQualificationDTO> searchid(int key) {
+		ArrayList<StudentQualificationDTO> resultList = new ArrayList<StudentQualificationDTO>();
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -30,7 +30,7 @@ public class QualificationDAO {
 				String date = rs.getString("date");
 				int sid = rs.getInt("sid");
 				String result = rs.getString("result");
-				resultList.add(new QualificationDTO(id, name, date, sid, result));
+				resultList.add(new StudentQualificationDTO(id, name, date, sid, result));
 			}
 		} catch (SQLException e) {
 			System.out.println("DBアクセスに失敗しました。");
@@ -66,8 +66,8 @@ public class QualificationDAO {
 		return resultList;
 	}
 
-	public static ArrayList<QualificationDTO> result(int key) {
-		ArrayList<QualificationDTO> resultList = new ArrayList<QualificationDTO>();
+	public static ArrayList<StudentQualificationDTO> result(int key) {
+		ArrayList<StudentQualificationDTO> resultList = new ArrayList<StudentQualificationDTO>();
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -86,7 +86,7 @@ public class QualificationDAO {
 				String date = rs.getString("date");
 				int sid = rs.getInt("sid");
 				String result = rs.getString("result");
-				resultList.add(new QualificationDTO(id, name, date, sid, result));
+				resultList.add(new StudentQualificationDTO(id, name, date, sid, result));
 			}
 		} catch (SQLException e) {
 			System.out.println("DBアクセスに失敗しました。");
@@ -122,8 +122,8 @@ public class QualificationDAO {
 		return resultList;
 	}
 
-	public static QualificationDTO Insert(int id, String name, String date, int sid, String result) {
-		QualificationDTO results = null;
+	public static StudentQualificationDTO Insert(int id, String name, String date, int sid, String result) {
+		StudentQualificationDTO results = null;
 		Connection co = null;
 		PreparedStatement ps = null;
 		try {
@@ -137,7 +137,7 @@ public class QualificationDAO {
 			ps.setString(4, result);
 
 			ps.executeUpdate();
-			results = new QualificationDTO(id, name, date, sid, result);
+			results = new StudentQualificationDTO(id, name, date, sid, result);
 		} catch (SQLException e) {
 			System.out.println("DBアクセスに失敗しました。");
 			e.printStackTrace();
@@ -156,8 +156,8 @@ public class QualificationDAO {
 		return results;
 	}
 
-	public static ArrayList<QualificationDTO> No(int key) {
-		ArrayList<QualificationDTO> resultList = new ArrayList<QualificationDTO>();
+	public static ArrayList<StudentQualificationDTO> No(int key) {
+		ArrayList<StudentQualificationDTO> resultList = new ArrayList<StudentQualificationDTO>();
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -176,7 +176,7 @@ public class QualificationDAO {
 				String date = rs.getString("date");
 				int sid = rs.getInt("sid");
 				String result = rs.getString("result");
-				resultList.add(new QualificationDTO(id, name, date, sid, result));
+				resultList.add(new StudentQualificationDTO(id, name, date, sid, result));
 			}
 		} catch (SQLException e) {
 			System.out.println("DBアクセスに失敗しました。");
@@ -212,8 +212,8 @@ public class QualificationDAO {
 		return resultList;
 	}
 
-	public static QualificationDTO update(int key, String result) {
-		QualificationDTO results = null;
+	public static StudentQualificationDTO update(int key, String result) {
+		StudentQualificationDTO results = null;
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -263,8 +263,8 @@ public class QualificationDAO {
 		return results;
 	}
 
-	public static QualificationDTO searchResult(int key) {
-		QualificationDTO results = null;
+	public static StudentQualificationDTO searchResult(int key) {
+		StudentQualificationDTO results = null;
 		Connection con = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
@@ -282,7 +282,7 @@ public class QualificationDAO {
 			String date = rs.getString("date");
 			int sid = rs.getInt("sid");
 			String result = rs.getString("result");
-			results = new QualificationDTO(id, name, date, sid, result);
+			results = new StudentQualificationDTO(id, name, date, sid, result);
 		} catch (SQLException e) {
 			System.out.println("DBアクセスに失敗しました。");
 			e.printStackTrace();

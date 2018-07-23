@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.LoginDAO;
-import dto.LoginDTO;
+import commonDAO.LoginDAO;
+import commonDTO.LoginDTO;
 
 /**
  * Servlet implementation class Login

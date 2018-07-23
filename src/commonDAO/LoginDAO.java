@@ -1,4 +1,4 @@
-package dao;
+package commonDAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import dto.LoginDTO;
+import commonDTO.LoginDTO;
 
 public class LoginDAO {
 

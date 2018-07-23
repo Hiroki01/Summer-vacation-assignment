@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.QualificationDAO;
-import dto.QualificationDTO;
+import studentDAO.StudentQualificationDAO;
+import studentDTO.StudentQualificationDTO;
 
 /**
  * Servlet implementation class UpdateResult
@@ -42,8 +42,8 @@ public class UpdateResult extends HttpServlet {
 			result = re.getParameter("kekka");
 
 			id = Integer.parseInt(re.getParameter("uid"));
-			QualificationDAO.update(id, result);
-			QualificationDTO resu = QualificationDAO.searchResult(id);
+			StudentQualificationDAO.update(id, result);
+			StudentQualificationDTO resu = StudentQualificationDAO.searchResult(id);
 			re.setAttribute("kousin", resu);
 
 			view = "/WEB-INF/student/updateResult.jsp";

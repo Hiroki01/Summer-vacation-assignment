@@ -25,7 +25,10 @@
 	<div id="container">
 
 		<div id="main">
-			<%
+
+			<section id="new" class="box">
+				<h2 id="newinfo_hdr" class="close"></h2>
+				<%
 				HttpSession sessions = request.getSession(true);
 
 				Object status = session.getAttribute("status");
@@ -54,8 +57,6 @@
 					}
 				}
 			%>
-			<section id="new" class="box">
-				<h2 id="newinfo_hdr" class="close"></h2>
 			<form action="/Qualification/Login" method="post">
 				<table class="example">
 					<caption>ログイン画面</caption>

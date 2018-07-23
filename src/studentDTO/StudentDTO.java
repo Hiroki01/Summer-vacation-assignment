@@ -1,4 +1,4 @@
-package dto;
+package studentDTO;
 
 public class StudentDTO {
 	private int id;

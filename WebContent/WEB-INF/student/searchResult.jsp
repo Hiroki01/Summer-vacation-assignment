@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
-<%@ page import="dto.QualificationDTO" %>
+<%@ page import="studentDTO.StudentQualificationDTO" %>
 <!DOCTYPE html>
 <html>
 
@@ -60,10 +60,14 @@
 
 		<div id="main">
 			<section id="new" class="box">
-			<%ArrayList<QualificationDTO> re = (ArrayList<QualificationDTO>)request.getAttribute("goukaku");
-			if(re.isEmpty()){%>
+			<%
+				ArrayList<StudentQualificationDTO> re = (ArrayList<StudentQualificationDTO>)request.getAttribute("goukaku");
+				if(re.isEmpty()){
+			%>
 			<p>合格済み資格はありません。</p>
-			<%}else{ %>
+			<%
+				}else{
+			%>
 			<table class="example"style="color:black;">
 
 				<caption style="color:white;">あなたの所持資格一覧</caption>
@@ -78,7 +82,7 @@
 
 				<tbody>
 				<%
-				for(QualificationDTO anko : re){
+					for(StudentQualificationDTO anko : re){
 				%>
 					<tr>
 						<td><%=anko.getName() %></td>

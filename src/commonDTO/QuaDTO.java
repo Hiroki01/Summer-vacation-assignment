@@ -1,4 +1,4 @@
-package dto;
+package commonDTO;
 
 public class QuaDTO {
 	private int id;

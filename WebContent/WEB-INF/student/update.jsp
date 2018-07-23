@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
-<%@ page import="dto.QualificationDTO"%>
+<%@ page import="studentDTO.StudentQualificationDTO"%>
 <!DOCTYPE html>
 <html>
 
@@ -77,8 +77,8 @@
 
 				<tbody>
 					<%
-						ArrayList<QualificationDTO> re = (ArrayList<QualificationDTO>) request.getAttribute("mijuken");
-						for (QualificationDTO anko : re) {
+						ArrayList<StudentQualificationDTO> re = (ArrayList<StudentQualificationDTO>) request.getAttribute("mijuken");
+									for (StudentQualificationDTO anko : re) {
 					%>
 					<tr>
 						<td><%=anko.getId() %></td>

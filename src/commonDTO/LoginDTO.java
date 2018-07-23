@@ -1,4 +1,4 @@
-package dto;
+package commonDTO;
 
 public class LoginDTO {
 	private int id;

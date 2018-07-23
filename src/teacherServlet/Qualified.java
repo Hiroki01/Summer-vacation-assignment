@@ -1,4 +1,4 @@
-package studentServlet;
+package teacherServlet;
 
 import java.io.IOException;
 
@@ -10,20 +10,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import studentDAO.StudentDAO;
-import studentDTO.StudentDTO;
-
 /**
- * Servlet implementation class Profile
+ * Servlet implementation class Qualified
  */
-@WebServlet("/Profile")
-public class Profile extends HttpServlet {
+@WebServlet("/Qualified")
+public class Qualified extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Profile() {
+    public Qualified() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,15 +32,14 @@ public class Profile extends HttpServlet {
 		re.setCharacterEncoding("UTF-8");
 		String view = null;
 		HttpSession s = re.getSession();
-		int id;
-		StudentDTO result;
 
 		try {
-			id = (int) s.getAttribute("id");
-			result = StudentDAO.search(id);
-			re.setAttribute("pro", result);
 
-			view = "/WEB-INF/student/profile.jsp";
+
+			//ArrayList<QualificationDTO> result = QualificationDAO.result();
+			//re.setAttribute("goukaku", result);
+
+			view = "/WEB-INF/student/searchResult.jsp";
 		} catch (NumberFormatException e) {
 			view = "/WEB-INF/student/smenu.jsp";
 			s.setAttribute("status", "No");

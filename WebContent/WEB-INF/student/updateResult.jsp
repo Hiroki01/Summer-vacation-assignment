@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="dto.QualificationDTO"%>
+<%@ page import="studentDTO.StudentQualificationDTO"%>
 <!DOCTYPE html>
 <html>
 
@@ -72,7 +72,7 @@
 
 					<tbody>
 						<%
-							QualificationDTO anko = (QualificationDTO) request.getAttribute("kousin");
+							StudentQualificationDTO anko = (StudentQualificationDTO) request.getAttribute("kousin");
 						%>
 						<tr>
 							<td><%=anko.getName()%></td>
