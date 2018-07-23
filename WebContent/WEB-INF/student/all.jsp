@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList"%>
-<%@ page import="dto.QualificationDTO" %>
+<%@ page import="dto.QualificationDTO"%>
 <!DOCTYPE html>
 <html>
 
@@ -51,46 +51,50 @@
 	<main role="main"> <!-- Page content --> </main>
 
 	<script>
-        $(document).ready(function() {
-            $('.drawer').drawer();
-        });
-
-    </script>
+		$(document).ready(function() {
+			$('.drawer').drawer();
+		});
+	</script>
 	<div id="container">
 
 		<div id="main">
 
-			<br>
-			<table class="example">
+			<section id="new" class="box">
+				<br>
+				<table class="example" style="color: black;">
 
-				<caption>あなたの所持資格一覧</caption>
+					<caption style="color:white;">あなたの所持資格一覧</caption>
 
-				<thead>
-					<tr>
-						<th>資格名</th>
-						<th>受験日</th>
-						<th>結果</th>
-					</tr>
-				</thead>
+					<thead>
+						<tr>
+							<th>資格名</th>
+							<th>受験日</th>
+							<th>結果</th>
+						</tr>
+					</thead>
 
-				<tbody>
-				<%ArrayList<QualificationDTO> re = (ArrayList<QualificationDTO>)request.getAttribute("result");
-				for(QualificationDTO anko : re){
-				%>
-					<tr>
-						<td><%=anko.getName() %></td>
-						<td><%=anko.getDate() %></td>
-						<td><%=anko.getResult() %></td>
-					</tr>
-					<%} %>
-				</tbody>
+					<tbody>
+						<%
+							ArrayList<QualificationDTO> re = (ArrayList<QualificationDTO>) request.getAttribute("result");
+							for (QualificationDTO anko : re) {
+						%>
+						<tr>
+							<td><%=anko.getName()%></td>
+							<td><%=anko.getDate()%></td>
+							<td><%=anko.getResult()%></td>
+						</tr>
+						<%
+							}
+						%>
+					</tbody>
 
-			</table>
-			<br>
-			<div id="bar"></div>
+				</table>
+				<br>
+				<div id="bar"></div>
+			</section>
 		</div>
 		<!--main-->
-	<p id="pagetop">
+		<p id="pagetop">
 			<a href="#">↑</a>
 		</p>
 
@@ -104,19 +108,17 @@
 	<!--/container-->
 
 	<script type="text/javascript">
-        date = new Date();
-        thisYear = date.getFullYear();
-        document.getElementById("thisYear").innerHTML = thisYear;
-
-    </script>
+		date = new Date();
+		thisYear = date.getFullYear();
+		document.getElementById("thisYear").innerHTML = thisYear;
+	</script>
 
 
 	<script type="text/javascript">
-        if (OCwindowWidth() <= 800) {
-            open_close("newinfo_hdr", "newinfo");
-        }
-
-    </script>
+		if (OCwindowWidth() <= 800) {
+			open_close("newinfo_hdr", "newinfo");
+		}
+	</script>
 
 </body>
 

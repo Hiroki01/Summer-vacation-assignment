@@ -50,41 +50,42 @@
 	<main role="main"> <!-- Page content --> </main>
 
 	<script>
-        $(document).ready(function() {
-            $('.drawer').drawer();
-        });
-
-    </script>
+		$(document).ready(function() {
+			$('.drawer').drawer();
+		});
+	</script>
 	<div id="container">
 
 		<div id="main">
-			<table class="example" id="TBL">
+			<section id="new" class="box">
+				<table class="example" id="TBL" style="color: black;">
 
-				<caption>更新結果</caption>
+					<caption>更新結果</caption>
 
-				<thead>
-					<tr>
-						<th>資格名</th>
-						<th>受験日</th>
-						<th>結果</th>
-					</tr>
-				</thead>
+					<thead>
+						<tr>
+							<th>資格名</th>
+							<th>受験日</th>
+							<th>結果</th>
+						</tr>
+					</thead>
 
-				<tbody>
-					<%
-						QualificationDTO anko = (QualificationDTO) request.getAttribute("kousin");
-					%>
-					<tr>
-						<td><%=anko.getName()%></td>
-						<td><%=anko.getDate()%></td>
-						<td><%=anko.getResult()%></td>
-					</tr>
-				</tbody>
-			</table>
-			<div id="bar"></div>
+					<tbody>
+						<%
+							QualificationDTO anko = (QualificationDTO) request.getAttribute("kousin");
+						%>
+						<tr>
+							<td><%=anko.getName()%></td>
+							<td><%=anko.getDate()%></td>
+							<td><%=anko.getResult()%></td>
+						</tr>
+					</tbody>
+				</table>
+				<div id="bar"></div>
+			</section>
 		</div>
 		<!--main-->
-	<p id="pagetop">
+		<p id="pagetop">
 			<a href="#">↑</a>
 		</p>
 
@@ -98,19 +99,17 @@
 	<!--/container-->
 
 	<script type="text/javascript">
-        date = new Date();
-        thisYear = date.getFullYear();
-        document.getElementById("thisYear").innerHTML = thisYear;
-
-    </script>
+		date = new Date();
+		thisYear = date.getFullYear();
+		document.getElementById("thisYear").innerHTML = thisYear;
+	</script>
 
 
 	<script type="text/javascript">
-        if (OCwindowWidth() <= 800) {
-            open_close("newinfo_hdr", "newinfo");
-        }
-
-    </script>
+		if (OCwindowWidth() <= 800) {
+			open_close("newinfo_hdr", "newinfo");
+		}
+	</script>
 
 </body>
 

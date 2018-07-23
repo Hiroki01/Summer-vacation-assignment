@@ -52,6 +52,7 @@
 			}
 		}
 	%>
+	<section id="new" class="box">
 			<br>
 			<form action="/Qualification/AddResult" name="f" class="contact"
 				method="post">
@@ -206,6 +207,7 @@
 			</form>
 			<br>
 			<div id="bar"></div>
+			</section>
 		</div>
 		<!--main-->
 	<p id="pagetop">

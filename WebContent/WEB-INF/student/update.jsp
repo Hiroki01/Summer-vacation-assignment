@@ -60,10 +60,11 @@
 	<div id="container">
 
 		<div id="main">
+		<section id="new" class="box">
 			<br>
-			<table class="example" id="TBL">
+			<table class="example" id="TBL" style="color:black;">
 
-				<caption>受験結果未更新リスト</caption>
+				<caption style="color:white;">受験結果未更新リスト</caption>
 
 				<thead>
 					<tr>
@@ -100,6 +101,7 @@
 			</form>
 			<br>
 			<div id="bar"></div>
+			</section>
 		</div>
 		<!--main-->
 	<p id="pagetop">

@@ -49,22 +49,24 @@
 	<main role="main"> <!-- Page content --> </main>
 
 	<script>
-        $(document).ready(function() {
-            $('.drawer').drawer();
-        });
-
-    </script>
+		$(document).ready(function() {
+			$('.drawer').drawer();
+		});
+	</script>
 	<div id="container">
 
 		<div id="main">
+			<section id="new" class="box">
 
-			<br>
-			<p>新規受験情報登録完了しました。<br>
-			確認する場合は上の受験資格一覧から</p>
-			<br>
+				<br>
+				<p>
+					新規受験情報登録完了しました。<br> 確認する場合は上の受験資格一覧から
+				</p>
+				<br>
+			</section>
 		</div>
 		<!--main-->
-	<p id="pagetop">
+		<p id="pagetop">
 			<a href="#">↑</a>
 		</p>
 
@@ -78,19 +80,17 @@
 	<!--/container-->
 
 	<script type="text/javascript">
-        date = new Date();
-        thisYear = date.getFullYear();
-        document.getElementById("thisYear").innerHTML = thisYear;
-
-    </script>
+		date = new Date();
+		thisYear = date.getFullYear();
+		document.getElementById("thisYear").innerHTML = thisYear;
+	</script>
 
 
 	<script type="text/javascript">
-        if (OCwindowWidth() <= 800) {
-            open_close("newinfo_hdr", "newinfo");
-        }
-
-    </script>
+		if (OCwindowWidth() <= 800) {
+			open_close("newinfo_hdr", "newinfo");
+		}
+	</script>
 
 </body>
 

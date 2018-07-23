@@ -59,13 +59,14 @@
 	<div id="container">
 
 		<div id="main">
+			<section id="new" class="box">
 			<%ArrayList<QualificationDTO> re = (ArrayList<QualificationDTO>)request.getAttribute("goukaku");
 			if(re.isEmpty()){%>
 			<p>合格済み資格はありません。</p>
 			<%}else{ %>
-			<table class="example">
+			<table class="example"style="color:black;">
 
-				<caption>あなたの所持資格一覧</caption>
+				<caption style="color:white;">あなたの所持資格一覧</caption>
 
 				<thead>
 					<tr>
@@ -92,6 +93,7 @@
 			<%} %>
 			<br>
 			<div id="bar"></div>
+			</section>
 		</div>
 		<!--main-->
 	<p id="pagetop">

@@ -59,7 +59,7 @@
 	<div id="container">
 
 		<div id="main">
-
+			<section id="new" class="box">
 			<%
 				ArrayList<QuaDTO> re = (ArrayList<QuaDTO>) request.getAttribute("sikakudao");
 			%>
@@ -72,7 +72,7 @@
 					<img src="/Qualification/image/required1.gif" alt="必須" width="26"
 						height="15"> マークの項目は入力必須となります。
 				</p>
-				<table class="example">
+				<table class="example"style="color:black;">
 					<tbody>
 						<tr>
 							<th><label for="name">受験資格名</label></th>
@@ -188,6 +188,7 @@
 			</form>
 			<br>
 			<div id="bar"></div>
+			</section>
 		</div>
 		<!--main-->
 	<p id="pagetop">

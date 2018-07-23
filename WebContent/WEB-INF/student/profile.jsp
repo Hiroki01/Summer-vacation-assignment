@@ -69,7 +69,7 @@
 						<img src="/Qualification/image/required1.gif" alt="必須" width="26"
 							height="15"> マークの項目は入力必須となります。
 					</p>
-					<table>
+					<table style="color:black;">
 						<tbody>
 							<tr>
 								<th><label for="name">氏名：</label></th>
