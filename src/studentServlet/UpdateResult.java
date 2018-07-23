@@ -1,6 +1,7 @@
-package servlet;
+package studentServlet;
 
 import java.io.IOException;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,16 +14,16 @@ import dao.QualificationDAO;
 import dto.QualificationDTO;
 
 /**
- * Servlet implementation class InsertResult
+ * Servlet implementation class UpdateResult
  */
-@WebServlet("/InsertResult")
-public class InsertResult extends HttpServlet {
+@WebServlet("/UpdateResult")
+public class UpdateResult extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public InsertResult() {
+    public UpdateResult() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,34 +35,33 @@ public class InsertResult extends HttpServlet {
 		re.setCharacterEncoding("UTF-8");
 		String view = null;
 		HttpSession s = re.getSession();
-		int sid;
+		int id;
+		String result;
 
 		try {
-			sid = (int) s.getAttribute("id");
+			result = re.getParameter("kekka");
 
-			String name = re.getParameter("juken");
-			int id = 0;
-			String year = re.getParameter("year");
-			String month = re.getParameter("month");
-			String day = re.getParameter("day");
-			String date = year + "年" + month + "月" + day + "日";
-			String result = "未受験";
+			id = Integer.parseInt(re.getParameter("uid"));
+			QualificationDAO.update(id, result);
+			QualificationDTO resu = QualificationDAO.searchResult(id);
+			re.setAttribute("kousin", resu);
 
-			QualificationDTO resa = QualificationDAO.Insert(id, name, date, sid, result);
-			re.setAttribute("in", resa);
-			view = "/WEB-INF/view/insertResult.jsp";
+			view = "/WEB-INF/student/updateResult.jsp";
 		} catch (NumberFormatException e) {
-			view = "/WEB-INF/view/insert.jsp";
+			view = "/WEB-INF/student/smenu.jsp";
 			s.setAttribute("status", "No");
 			e.getStackTrace();
+			System.out.println(e);
 		} catch (NullPointerException e) {
-			view = "/WEB-INF/view/insert.jsp";
-			s.setAttribute("status", "Null");
+			view = "/WEB-INF/student/smenu.jsp";
+			s.setAttribute("status", "nai");
 			e.getStackTrace();
+			System.out.println(e);;
 		} catch (Exception e) {
-			view = "/WEB-INF/view/insert.jsp";
+			view = "/WEB-INF/student/smenu.jsp";
 			s.setAttribute("status", "Exception");
 			e.getStackTrace();
+			System.out.println(e);
 		} finally {
 			RequestDispatcher dispatcher = re.getRequestDispatcher(view);
 			dispatcher.forward(re, response);

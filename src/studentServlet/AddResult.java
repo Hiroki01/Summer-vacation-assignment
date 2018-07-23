@@ -1,7 +1,6 @@
-package servlet;
+package studentServlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,20 +10,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.QualificationDAO;
-import dto.QualificationDTO;
+import dao.StudentDAO;
+import dto.StudentDTO;
 
 /**
- * Servlet implementation class Update_qualifications
+ * Servlet implementation class AddResult
  */
-@WebServlet("/Update_qualifications")
-public class Update_qualifications extends HttpServlet {
+@WebServlet("/AddResult")
+public class AddResult extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Update_qualifications() {
+    public AddResult() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,26 +35,36 @@ public class Update_qualifications extends HttpServlet {
 		re.setCharacterEncoding("UTF-8");
 		String view = null;
 		HttpSession s = re.getSession();
-		int id;
 
 		try {
-			id = (int) s.getAttribute("id");
-			ArrayList<QualificationDTO> result = QualificationDAO.No(id);
-			re.setAttribute("mijuken", result);
+			int id = Integer.parseInt(re.getParameter("id"));
+			String name = re.getParameter("name");
+			String namek = re.getParameter("namek");
+			String gender = re.getParameter("gender");
+			String email = re.getParameter("email");
+			String department = re.getParameter("department");
+			String course = re.getParameter("course");
+			String school_year = re.getParameter("school_year");
+			String set_in = re.getParameter("set_in");
+			String pass = re.getParameter("pass");
 
-			view = "/WEB-INF/view/update.jsp";
+			StudentDTO result = StudentDAO.Insert(id, name, namek, gender, email, department, course, school_year,
+					set_in,
+					pass);
+			re.setAttribute("add", result);
+			view = "/WEB-INF/student/addResult.jsp";
 		} catch (NumberFormatException e) {
-			view = "/WEB-INF/view/smenu.jsp";
+			view = "/WEB-INF/student/add.jsp";
 			s.setAttribute("status", "No");
 			e.getStackTrace();
 			System.out.println(e);
 		} catch (NullPointerException e) {
-			view = "/WEB-INF/view/smenu.jsp";
-			s.setAttribute("status", "Null");
+			view = "/WEB-INF/student/add.jsp";
+			s.setAttribute("status", "nai");
 			e.getStackTrace();
-			System.out.println(e);
+			System.out.println(e);;
 		} catch (Exception e) {
-			view = "/WEB-INF/view/smenu.jsp";
+			view = "/WEB-INF/student/add.jsp";
 			s.setAttribute("status", "Exception");
 			e.getStackTrace();
 			System.out.println(e);

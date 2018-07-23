@@ -1,6 +1,7 @@
-package servlet;
+package studentServlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,20 +11,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.StudentDAO;
-import dto.StudentDTO;
+import dao.QuaDAO;
+import dto.QuaDTO;
 
 /**
- * Servlet implementation class Profile
+ * Servlet implementation class Insert_qualifications
  */
-@WebServlet("/Profile")
-public class Profile extends HttpServlet {
+@WebServlet("/Insert_qualifications")
+public class Insert_qualifications extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Profile() {
+    public Insert_qualifications() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,27 +36,27 @@ public class Profile extends HttpServlet {
 		re.setCharacterEncoding("UTF-8");
 		String view = null;
 		HttpSession s = re.getSession();
-		int id;
-		StudentDTO result;
 
 		try {
-			id = (int) s.getAttribute("id");
-			result = StudentDAO.search(id);
-			re.setAttribute("pro", result);
+			ArrayList<QuaDTO> result = QuaDAO.all();
+			re.setAttribute("sikakudao", result);
 
-			view = "/WEB-INF/view/profile.jsp";
+			view = "/WEB-INF/student/insert.jsp";
 		} catch (NumberFormatException e) {
-			view = "/WEB-INF/view/smenu.jsp";
+			view = "/WEB-INF/student/smenu.jsp";
 			s.setAttribute("status", "No");
 			e.getStackTrace();
+			System.out.println(e);
 		} catch (NullPointerException e) {
-			view = "/WEB-INF/view/smenu.jsp";
-			s.setAttribute("status", "Null");
+			view = "/WEB-INF/student/smenu.jsp";
+			s.setAttribute("status", "nai");
 			e.getStackTrace();
+			System.out.println(e);;
 		} catch (Exception e) {
-			view = "/WEB-INF/view/smenu.jsp";
+			view = "/WEB-INF/student/smenu.jsp";
 			s.setAttribute("status", "Exception");
 			e.getStackTrace();
+			System.out.println(e);
 		} finally {
 			RequestDispatcher dispatcher = re.getRequestDispatcher(view);
 			dispatcher.forward(re, response);

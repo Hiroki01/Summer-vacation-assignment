@@ -1,4 +1,4 @@
-package servlet;
+package studentServlet;
 
 import java.io.IOException;
 
@@ -28,7 +28,7 @@ public class Add extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String view = "/WEB-INF/view/add.jsp";
+		String view = "/WEB-INF/student/add.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 		dispatcher.forward(request, response);
 	}

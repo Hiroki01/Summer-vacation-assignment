@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<main></main>
+	<main role="main"> <!-- Page content --> </main>
 
 	<script>
 		$(document).ready(function() {

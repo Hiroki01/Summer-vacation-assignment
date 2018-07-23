@@ -1,4 +1,4 @@
-package servlet;
+package teacherServlet;
 
 import java.io.IOException;
 
@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Smenu
+ * Servlet implementation class Qualified_owner
  */
-@WebServlet("/Smenu")
-public class Smenu extends HttpServlet {
+@WebServlet("/Qualified_owner")
+public class Qualified_owner extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Smenu() {
+    public Qualified_owner() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,7 +28,8 @@ public class Smenu extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String view = "/WEB-INF/view/smenu.jsp";
+		//資格所持者検索用servlet
+		String view = "/WEB-INF/teacher/qualified_owner.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 		dispatcher.forward(request, response);
 	}

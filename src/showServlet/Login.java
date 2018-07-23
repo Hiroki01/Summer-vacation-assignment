@@ -1,4 +1,4 @@
-package servlet;
+package showServlet;
 
 import java.io.IOException;
 
@@ -44,7 +44,7 @@ public class Login extends HttpServlet {
 			if (id > 1000000) {
 				result = LoginDAO.login(id, pass);
 				if(result != null){
-				view = "/WEB-INF/view/smenu.jsp";
+				view = "/WEB-INF/student/smenu.jsp";
 				}else{
 					view = "/WEB-INF/view/top.jsp";
 				}
@@ -52,7 +52,7 @@ public class Login extends HttpServlet {
 			} else if (id < 1000000) {
 				result = LoginDAO.logins(id, pass);
 				if (result != null) {
-					view = "/WEB-INF/view/tmenu.jsp";
+					view = "/WEB-INF/teacher/tmenu.jsp";
 					}else{
 						view = "/WEB-INF/view/top.jsp";
 					}
@@ -60,7 +60,7 @@ public class Login extends HttpServlet {
 			} else {
 				result = LoginDAO.admin(id, pass);
 				if (result != null) {
-					view = "/WEB-INF/view/amenu.jsp";
+					view = "/WEB-INF/admin/amenu.jsp";
 					}else{
 						view = "/WEB-INF/view/top.jsp";
 					}

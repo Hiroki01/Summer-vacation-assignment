@@ -1,6 +1,7 @@
-package servlet;
+package studentServlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,16 +15,16 @@ import dao.QualificationDAO;
 import dto.QualificationDTO;
 
 /**
- * Servlet implementation class UpdateResult
+ * Servlet implementation class Search_qualifications
  */
-@WebServlet("/UpdateResult")
-public class UpdateResult extends HttpServlet {
+@WebServlet("/Search_qualifications")
+public class Search_qualifications extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public UpdateResult() {
+    public Search_qualifications() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,29 +37,26 @@ public class UpdateResult extends HttpServlet {
 		String view = null;
 		HttpSession s = re.getSession();
 		int id;
-		String result;
 
 		try {
-			result = re.getParameter("kekka");
+			id = (int) s.getAttribute("id");
 
-			id = Integer.parseInt(re.getParameter("uid"));
-			QualificationDAO.update(id, result);
-			QualificationDTO resu = QualificationDAO.searchResult(id);
-			re.setAttribute("kousin", resu);
+			ArrayList<QualificationDTO> result = QualificationDAO.result(id);
+			re.setAttribute("goukaku", result);
 
-			view = "/WEB-INF/view/updateResult.jsp";
+			view = "/WEB-INF/student/searchResult.jsp";
 		} catch (NumberFormatException e) {
-			view = "/WEB-INF/view/update.jsp";
+			view = "/WEB-INF/student/smenu.jsp";
 			s.setAttribute("status", "No");
 			e.getStackTrace();
 			System.out.println(e);
 		} catch (NullPointerException e) {
-			view = "/WEB-INF/view/update.jsp";
-			s.setAttribute("status", "Null");
+			view = "/WEB-INF/student/smenu.jsp";
+			s.setAttribute("status", "nai");
 			e.getStackTrace();
-			System.out.println(e);
+			System.out.println(e);;
 		} catch (Exception e) {
-			view = "/WEB-INF/view/update.jsp";
+			view = "/WEB-INF/student/smenu.jsp";
 			s.setAttribute("status", "Exception");
 			e.getStackTrace();
 			System.out.println(e);

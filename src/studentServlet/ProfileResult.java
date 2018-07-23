@@ -1,4 +1,4 @@
-package servlet;
+package studentServlet;
 
 import java.io.IOException;
 
@@ -58,19 +58,22 @@ public class ProfileResult extends HttpServlet {
 						set_in, pass2);
 			}
 			re.setAttribute("pro", result);
-			view = "/WEB-INF/view/profile.jsp";
+			view = "/WEB-INF/student/profile.jsp";
 		} catch (NumberFormatException e) {
-			view = "/WEB-INF/view/smenu.jsp";
+			view = "/WEB-INF/student/smenu.jsp";
 			s.setAttribute("status", "No");
 			e.getStackTrace();
+			System.out.println(e);
 		} catch (NullPointerException e) {
-			view = "/WEB-INF/view/smenu.jsp";
-			s.setAttribute("status", "Null");
+			view = "/WEB-INF/student/smenu.jsp";
+			s.setAttribute("status", "nai");
 			e.getStackTrace();
+			System.out.println(e);;
 		} catch (Exception e) {
-			view = "/WEB-INF/view/smenu.jsp";
+			view = "/WEB-INF/student/smenu.jsp";
 			s.setAttribute("status", "Exception");
 			e.getStackTrace();
+			System.out.println(e);
 		} finally {
 			RequestDispatcher dispatcher = re.getRequestDispatcher(view);
 			dispatcher.forward(re, response);

@@ -1,4 +1,4 @@
-package servlet;
+package studentServlet;
 
 import java.io.IOException;
 
@@ -10,20 +10,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dao.StudentDAO;
-import dto.StudentDTO;
+import dao.QualificationDAO;
+import dto.QualificationDTO;
 
 /**
- * Servlet implementation class AddResult
+ * Servlet implementation class InsertResult
  */
-@WebServlet("/AddResult")
-public class AddResult extends HttpServlet {
+@WebServlet("/InsertResult")
+public class InsertResult extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddResult() {
+    public InsertResult() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,36 +35,37 @@ public class AddResult extends HttpServlet {
 		re.setCharacterEncoding("UTF-8");
 		String view = null;
 		HttpSession s = re.getSession();
+		int sid;
 
 		try {
-			int id = Integer.parseInt(re.getParameter("id"));
-			String name = re.getParameter("name");
-			String namek = re.getParameter("namek");
-			String gender = re.getParameter("gender");
-			String email = re.getParameter("email");
-			String department = re.getParameter("department");
-			String course = re.getParameter("course");
-			String school_year = re.getParameter("school_year");
-			String set_in = re.getParameter("set_in");
-			String pass = re.getParameter("pass");
+			sid = (int) s.getAttribute("id");
 
-			StudentDTO result = StudentDAO.Insert(id, name, namek, gender, email, department, course, school_year,
-					set_in,
-					pass);
-			re.setAttribute("add", result);
-			view = "/WEB-INF/view/addResult.jsp";
+			String name = re.getParameter("juken");
+			int id = 0;
+			String year = re.getParameter("year");
+			String month = re.getParameter("month");
+			String day = re.getParameter("day");
+			String date = year + "年" + month + "月" + day + "日";
+			String result = "未受験";
+
+			QualificationDTO resa = QualificationDAO.Insert(id, name, date, sid, result);
+			re.setAttribute("in", resa);
+			view = "/WEB-INF/student/insertResult.jsp";
 		} catch (NumberFormatException e) {
-			view = "/WEB-INF/view/add.jsp";
+			view = "/WEB-INF/student/insert.jsp";
 			s.setAttribute("status", "No");
 			e.getStackTrace();
+			System.out.println(e);
 		} catch (NullPointerException e) {
-			view = "/WEB-INF/view/add.jsp";
-			s.setAttribute("status", "Null");
+			view = "/WEB-INF/student/insert.jsp";
+			s.setAttribute("status", "nai");
 			e.getStackTrace();
+			System.out.println(e);;
 		} catch (Exception e) {
-			view = "/WEB-INF/view/add.jsp";
+			view = "/WEB-INF/student/insert.jsp";
 			s.setAttribute("status", "Exception");
 			e.getStackTrace();
+			System.out.println(e);
 		} finally {
 			RequestDispatcher dispatcher = re.getRequestDispatcher(view);
 			dispatcher.forward(re, response);

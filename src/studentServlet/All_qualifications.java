@@ -1,4 +1,4 @@
-package servlet;
+package studentServlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -43,19 +43,22 @@ public class All_qualifications extends HttpServlet {
 			ArrayList<QualificationDTO> result = QualificationDAO.searchid(id);
 			re.setAttribute("result", result);
 
-			view = "/WEB-INF/view/all.jsp";
+			view = "/WEB-INF/student/all.jsp";
 		} catch (NumberFormatException e) {
-			view = "/WEB-INF/view/smenu.jsp";
+			view = "/WEB-INF/student/smenu.jsp";
 			s.setAttribute("status", "No");
 			e.getStackTrace();
+			System.out.println(e);
 		} catch (NullPointerException e) {
-			view = "/WEB-INF/view/smenu.jsp";
-			s.setAttribute("status", "Null");
+			view = "/WEB-INF/student/smenu.jsp";
+			s.setAttribute("status", "nai");
 			e.getStackTrace();
+			System.out.println(e);;
 		} catch (Exception e) {
-			view = "/WEB-INF/view/smenu.jsp";
+			view = "/WEB-INF/student/smenu.jsp";
 			s.setAttribute("status", "Exception");
 			e.getStackTrace();
+			System.out.println(e);
 		} finally {
 			RequestDispatcher dispatcher = re.getRequestDispatcher(view);
 			dispatcher.forward(re, response);

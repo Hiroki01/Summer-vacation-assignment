@@ -1,4 +1,4 @@
-package servlet;
+package showServlet;
 
 import java.io.IOException;
 
@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Tmenu
+ * Servlet implementation class TopShow
  */
-@WebServlet("/Tmenu")
-public class Tmenu extends HttpServlet {
+@WebServlet("/TopShow")
+public class TopShow extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Tmenu() {
+    public TopShow() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,7 +28,7 @@ public class Tmenu extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String view = "/WEB-INF/view/tmenu.jsp";
+		String view = "/WEB-INF/view/top.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 		dispatcher.forward(request, response);
 	}

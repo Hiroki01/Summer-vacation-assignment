@@ -39,7 +39,7 @@
 	</p>
 	<%
 		session.setAttribute("status", null);
-			} else if (status.equals("Null")) {
+			} else if (status.equals("nai")) {
 	%>
 	<p>存在しないユーザです。</p>
 	<%
