@@ -100,7 +100,7 @@
 						}
 					}
 				%>
-				<form action="/Qualification/Accepted" method="post">
+				<form action="/Qualification/Class" method="post">
 					<table class="example" style="color: black">
 						<caption>検索したい学科・学年・クラスの指定をしてください。</caption>
 						<tbody>
