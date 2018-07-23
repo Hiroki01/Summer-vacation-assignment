@@ -100,16 +100,16 @@
 						}
 					}
 				%>
-				<form action="/Qualification/Qualified" method="post">
+				<form action="/Qualification/Desingnated" method="post">
 					<table class="example" style="color: black">
-						<caption>ログイン画面</caption>
+						<caption>資格受験者検索</caption>
 						<tbody>
 							<tr>
 								<td>調べたい資格名入力</td>
 								<td class="arbitrary"><img
 									src="/Qualification/image/required1.gif" alt="必須" width="26"
 									height="15"></td>
-								<td><input type="text" name="qname" required></td>
+								<td><input type="text" name="qnames" required></td>
 							</tr>
 							<tr>
 								<td><input type="submit" value="検索"></td>
