@@ -1,0 +1,75 @@
+package teacherDTO;
+
+public class TeacherQualificationDTO {
+	private int id;
+	private String name;
+	private String date;
+	private int sid;
+	private String sname;
+	private String result;
+
+	public TeacherQualificationDTO(int id, String name, String date, int sid, String result) {
+		this.id = id;
+		this.name = name;
+		this.date = date;
+		this.sid = sid;
+		this.result = result;
+	}
+
+	public TeacherQualificationDTO(int id2, String name2, String date2, String sname, String result2) {
+		this.id = id2;
+		this.name = name2;
+		this.date = date2;
+		this.sname = sname;
+		this.result = result2;
+	}
+
+	public String getSname() {
+		return sname;
+	}
+
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public int getSid() {
+		return sid;
+	}
+
+	public void setSid(int sid) {
+		this.sid = sid;
+	}
+
+	public String getResult() {
+		return result;
+	}
+
+	public void setResult(String result) {
+		this.result = result;
+	}
+
+}

@@ -35,7 +35,7 @@
 			<ul class="drawer-menu">
 				<li><a class="drawer-brand" href="#">MENU</a></li>
 				<li><a class="drawer-menu-item"
-					href="/Qualification/Insert_qualifications"><span>Search
+					href="/Qualification/Qualified_owner"><span>Search
 							qualified people</span>資格取得者検索</a></li>
 				<li><a class="drawer-menu-item"
 					href="/Qualification/Search_qualifications"><span>Indication
