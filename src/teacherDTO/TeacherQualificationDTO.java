@@ -6,6 +6,9 @@ public class TeacherQualificationDTO {
 	private String date;
 	private int sid;
 	private String sname;
+	private String depart;
+	private String school;
+	private String set;
 	private String result;
 
 	public TeacherQualificationDTO(int id, String name, String date, int sid, String result) {
@@ -22,6 +25,42 @@ public class TeacherQualificationDTO {
 		this.date = date2;
 		this.sname = sname;
 		this.result = result2;
+	}
+
+	public TeacherQualificationDTO(int id2, String name2, String date2, String sname2, String depart, String school,
+			String set, String result2) {
+		this.id = id2;
+		this.name = name2;
+		this.date = date2;
+		this.sname = sname2;
+		this.depart = depart;
+		this.school = school;
+		this.set = set;
+		this.result = result2;
+	}
+
+	public String getDepart() {
+		return depart;
+	}
+
+	public void setDepart(String depart) {
+		this.depart = depart;
+	}
+
+	public String getSchool() {
+		return school;
+	}
+
+	public void setSchool(String school) {
+		this.school = school;
+	}
+
+	public String getSet() {
+		return set;
+	}
+
+	public void setSet(String set) {
+		this.set = set;
 	}
 
 	public String getSname() {
