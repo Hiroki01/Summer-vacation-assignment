@@ -27,7 +27,7 @@
 		<div id="main">
 
 			<section id="new" class="box">
-				<h2 id="newinfo_hdr" class="close"></h2>
+				<h2 id="newinfo_hdr" class="close">ログイン画面やで</h2>
 				<%
 				HttpSession sessions = request.getSession(true);
 
