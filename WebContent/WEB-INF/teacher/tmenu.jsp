@@ -39,12 +39,12 @@
 							qualified people</span>資格取得者検索</a></li>
 				<li><a class="drawer-menu-item"
 					href="/Qualification/Designated_qualified_person"><span>Indication
-							of specific qualification examination result</span>資格受験結果表示</a></li>
+							of specific qualification examination result</span>特定資格受験結果表示</a></li>
 				<li><a class="drawer-menu-item"
 					href="/Qualification/Accepted_class"><span> Class
 							qualification acquisition status display</span>クラス毎資格取得状況表示</a></li>
 				<li><a class="drawer-menu-item"
-					href="/Qualification/Update_qualifications"><span>
+					href="/Qualification/Class_qualification"><span>
 							Class-by-class qualification examination status display</span>クラス毎資格受験状況表示</a></li>
 				<li><a class="drawer-menu-item"
 					href="/Qualification/Student_number"><span> Search

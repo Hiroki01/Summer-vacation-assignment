@@ -44,19 +44,13 @@
 					href="/Qualification/Designated_qualified_person"><span>Indication
 							of specific qualification examination result</span>特定資格受験結果表示</a></li>
 				<li><a class="drawer-menu-item"
-					href="/Qualification/Update_qualifications"><span> Class
+					href="/Qualification/Accepted_class"><span> Class
 							qualification acquisition status display</span>クラス毎資格取得状況表示</a></li>
 				<li><a class="drawer-menu-item"
-					href="/Qualification/Update_qualifications"><span>
+					href="/Qualification/Class_qualification"><span>
 							Class-by-class qualification examination status display</span>クラス毎資格受験状況表示</a></li>
 				<li><a class="drawer-menu-item"
-					href="/Qualification/Update_qualifications"><span>
-							Indication of qualification acquisition status for each grade</span>学年毎資格取得状況表示</a></li>
-				<li><a class="drawer-menu-item"
-					href="/Qualification/Update_qualifications"><span>Laboratory
-							examination status display for each grade</span>学年毎資格受験状況表示</a></li>
-				<li><a class="drawer-menu-item"
-					href="/Qualification/All_qualifications"><span> Search
+					href="/Qualification/Student_number"><span> Search
 							by Student ID Number</span>学籍番号毎検索</a></li>
 				<li><a class="drawer-menu-item" href="/Qualification/Profile"><span>PROFILE</span>プロフィール</a></li>
 			</ul>

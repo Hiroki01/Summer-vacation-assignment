@@ -36,15 +36,22 @@
 		</button>
 		<nav class="drawer-nav" role="navigation" id="menubar">
 			<ul class="drawer-menu">
-				<li><a class="drawer-brand" href="#">MENU</a></li>
+				<li><a class="drawer-brand" href="/Qualification/Tmenu">MENU</a></li>
 				<li><a class="drawer-menu-item"
-					href="/Qualification/Insert_qualifications"><span>INSERT</span>受験予定登録</a></li>
+					href="/Qualification/Qualified_owner"><span>Search
+							qualified people</span>資格取得者検索</a></li>
 				<li><a class="drawer-menu-item"
-					href="/Qualification/Search_qualifications"><span>HAVE</span>合格済み資格</a></li>
+					href="/Qualification/Designated_qualified_person"><span>Indication
+							of specific qualification examination result</span>特定資格受験結果表示</a></li>
 				<li><a class="drawer-menu-item"
-					href="/Qualification/Update_qualifications"><span>UPDATE</span>受験結果更新</a></li>
+					href="/Qualification/Accepted_class"><span> Class
+							qualification acquisition status display</span>クラス毎資格取得状況表示</a></li>
 				<li><a class="drawer-menu-item"
-					href="/Qualification/All_qualifications"><span>ALL</span>受験済み一覧</a></li>
+					href="/Qualification/Class_qualification"><span>
+							Class-by-class qualification examination status display</span>クラス毎資格受験状況表示</a></li>
+				<li><a class="drawer-menu-item"
+					href="/Qualification/Student_number"><span> Search
+							by Student ID Number</span>学籍番号毎検索</a></li>
 				<li><a class="drawer-menu-item" href="/Qualification/Profile"><span>PROFILE</span>プロフィール</a></li>
 			</ul>
 		</nav>
