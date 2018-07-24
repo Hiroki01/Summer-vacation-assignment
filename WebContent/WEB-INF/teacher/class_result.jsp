@@ -75,7 +75,7 @@
 		<div id="main">
 			<section id="new" class="box">
 			<%
-				ArrayList<TeacherQualificationDTO> re = (ArrayList<TeacherQualificationDTO>)request.getAttribute("sikaku3");
+				ArrayList<TeacherQualificationDTO> re = (ArrayList<TeacherQualificationDTO>)request.getAttribute("sikaku4");
 				if(re.isEmpty()){
 			%>
 			<p>受験者はいません</p>

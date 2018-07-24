@@ -39,15 +39,21 @@
 							qualified people</span>資格取得者検索</a></li>
 				<li><a class="drawer-menu-item"
 					href="/Qualification/Designated_qualified_person"><span>Indication
-							of specific qualification examination result</span>資格受験結果表示</a></li>
+							of specific qualification examination result</span>特定資格受験結果表示</a></li>
 				<li><a class="drawer-menu-item"
-					href="/Qualification/Accepted_class"><span> Class
+					href="/Qualification/Update_qualifications"><span> Class
 							qualification acquisition status display</span>クラス毎資格取得状況表示</a></li>
 				<li><a class="drawer-menu-item"
 					href="/Qualification/Update_qualifications"><span>
 							Class-by-class qualification examination status display</span>クラス毎資格受験状況表示</a></li>
 				<li><a class="drawer-menu-item"
-					href="/Qualification/Student_number"><span> Search
+					href="/Qualification/Update_qualifications"><span>
+							Indication of qualification acquisition status for each grade</span>学年毎資格取得状況表示</a></li>
+				<li><a class="drawer-menu-item"
+					href="/Qualification/Update_qualifications"><span>Laboratory
+							examination status display for each grade</span>学年毎資格受験状況表示</a></li>
+				<li><a class="drawer-menu-item"
+					href="/Qualification/All_qualifications"><span> Search
 							by Student ID Number</span>学籍番号毎検索</a></li>
 				<li><a class="drawer-menu-item" href="/Qualification/Profile"><span>PROFILE</span>プロフィール</a></li>
 			</ul>
@@ -65,54 +71,53 @@
 		<div id="main">
 
 			<section id="new" class="box">
-				<h2 id="newinfo_hdr" class="close">
-					<span>更新情報・お知らせ</span>
-				</h2>
-				<dl id="newinfo">
-					<dt>2018/07/11</dt>
-					<dd>
-						試作なう<span class="newicon">NEW</span>
-					</dd>
-					<dt>2018/00/00</dt>
-					<dd>書くことないよねぇ</dd>
-					<dt>2018/00/00</dt>
-					<dd>書くことないよねぇ</dd>
-					<dt>2018/00/00</dt>
-					<dd>書くことないよねぇ</dd>
-					<dt>2018/00/00</dt>
-					<dd>書くことないよねぇ</dd>
-					<dt>2018/00/00</dt>
-					<dd>書くことないよねぇ</dd>
-				</dl>
-			</section>
+				<%
+					HttpSession sessions = request.getSession(true);
 
-			<section class="box">
+					Object status = session.getAttribute("status");
 
-				<h2>
-					<span>使用方法等</span>必読
-				</h2>
-
-				<h3>受験予定登録</h3>
+					while (status != null) {
+						if (status.equals("NO")) {
+				%>
 				<p>
-					受験予定の資格を登録することができます。<br>間違えると更新できませんので確認をしっかり行ってください。
+					IDが数値型ではないです。<br> 再度IDを数値型に直して入力してください。
 				</p>
+				<%
+					session.setAttribute("status", null);
+							break;
+						} else if (status.equals("nai")) {
+				%>
+				<p>存在しないユーザです。</p>
+				<%
+					session.setAttribute("status", null);
+							break;
+						} else if (status.equals("Exception")) {
+				%>
+				<p>エラーが発生しました。</p>
+				<%
+					session.setAttribute("status", null);
+							break;
+						}
+					}
+				%>
+				<form action="/Qualification/Student" method="post">
+					<table class="example" style="color: black">
+						<caption>生徒検索</caption>
+						<tbody>
+							<tr>
+								<td>学籍番号</td>
+								<td class="arbitrary"><img
+									src="/Qualification/image/required1.gif" alt="必須" width="26"
+									height="15"></td>
+								<td><input type="text" name="num" required></td>
+							</tr>
+							<tr>
+								<td><input type="submit" value="検索"></td>
+							</tr>
+						</tbody>
+					</table>
 
-				<h3 class="color1">合格済み資格</h3>
-				<p>
-					合格している資格のみを表示するページです。<br>次受験の資格の参考にしてください。
-				</p>
-
-				<h3>受験結果更新</h3>
-				<p>受験予定登録ページで登録してあり、受験結果が出たものだけ更新してください。</p>
-
-				<h3>受験済み一覧</h3>
-				<p>
-					受験登録をしたものが全て表示されます。<br>不合格、未受験も対象です。
-				</p>
-				<h3>プロフィール</h3>
-				<p>
-					登録アカウント情報の変更を行えるページです。<br>登録ID（学籍番号）は変更できないので、変更したい場合は担当教師に依頼してください。
-				</p>
+				</form>
 
 			</section>
 		</div>

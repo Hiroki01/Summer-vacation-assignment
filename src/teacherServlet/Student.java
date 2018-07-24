@@ -15,16 +15,16 @@ import teacherDAO.TeacherQualificationDAO;
 import teacherDTO.TeacherQualificationDTO;
 
 /**
- * Servlet implementation class Class
+ * Servlet implementation class Student
  */
-@WebServlet("/Class")
-public class Class extends HttpServlet {
+@WebServlet("/Student")
+public class Student extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Class() {
+    public Student() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,31 +35,27 @@ public class Class extends HttpServlet {
 	protected void doGet(HttpServletRequest re, HttpServletResponse response) throws ServletException, IOException {
 		re.setCharacterEncoding("UTF-8");
 		String view = null;
-		String d;
-		String g;
-		String c;
+		int id;
 		HttpSession s = re.getSession();
 
 		try {
-			d = re.getParameter("department");
-			g = re.getParameter("school_year");
-			c = re.getParameter("set_in");
-			ArrayList<TeacherQualificationDTO> result = TeacherQualificationDAO.Searchs(d,g,c);
-			re.setAttribute("sikaku4", result);
+			id = Integer.parseInt(re.getParameter("num"));
+			ArrayList<TeacherQualificationDTO> result = TeacherQualificationDAO.search(id);
+			re.setAttribute("sikaku5", result);
 
-			view = "/WEB-INF/teacher/class_result.jsp";
+			view = "/WEB-INF/teacher/student_result.jsp";
 		} catch (NumberFormatException e) {
-			view = "/WEB-INF/teacher/class_qualification.jsp";
+			view = "/WEB-INF/teacher/student_menber.jsp";
 			s.setAttribute("status", "No");
 			e.getStackTrace();
 			System.out.println(e);
 		} catch (NullPointerException e) {
-			view = "/WEB-INF/teacher/class_qualification.jsp";
+			view = "/WEB-INF/teacher/student_menber.jsp";
 			s.setAttribute("status", "nai");
 			e.getStackTrace();
 			System.out.println(e);;
 		} catch (Exception e) {
-			view = "/WEB-INF/teacher/class_qualification.jsp";
+			view = "/WEB-INF/teacher/student_menber.jsp";
 			s.setAttribute("status", "Exception");
 			e.getStackTrace();
 			System.out.println(e);
