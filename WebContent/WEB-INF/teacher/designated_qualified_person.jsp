@@ -49,7 +49,6 @@
 				<li><a class="drawer-menu-item"
 					href="/Qualification/Student_number"><span> Search
 							by Student ID Number</span>学籍番号毎検索</a></li>
-				<li><a class="drawer-menu-item" href="/Qualification/Profile"><span>PROFILE</span>プロフィール</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -95,9 +94,9 @@
 					}
 				%>
 				<form action="/Qualification/Desingnated" method="post">
-					<table class="example" style="color: black">
+					<table class="example">
 						<caption style="color:write;">資格受験者検索</caption>
-						<tbody>
+						<tbody style="color: black">
 							<tr>
 								<td>調べたい資格名入力</td>
 								<td class="arbitrary"><img

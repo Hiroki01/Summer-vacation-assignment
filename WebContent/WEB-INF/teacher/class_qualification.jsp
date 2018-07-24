@@ -49,7 +49,6 @@
 				<li><a class="drawer-menu-item"
 					href="/Qualification/Student_number"><span> Search
 							by Student ID Number</span>学籍番号毎検索</a></li>
-				<li><a class="drawer-menu-item" href="/Qualification/Profile"><span>PROFILE</span>プロフィール</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -95,9 +94,9 @@
 					}
 				%>
 				<form action="/Qualification/Class" method="post">
-					<table class="example" style="color: black">
+					<table class="example">
 						<caption style="color:write;">検索したい学科・学年・クラスの指定をしてください。</caption>
-						<tbody>
+						<tbody style="color: black">
 						<tr>
 							<th><label for="department"> 学科：</label></th>
 							<td class="arbitrary"><img
