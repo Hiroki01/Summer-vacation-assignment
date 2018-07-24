@@ -49,7 +49,7 @@ public class Login extends HttpServlet {
 					view = "/WEB-INF/view/top.jsp";
 				}
 				// 生徒用
-			} else if (id < 1000000) {
+			} else if (100 < id && id < 1000000) {
 				result = LoginDAO.logins(id, pass);
 				if (result != null) {
 					view = "/WEB-INF/teacher/tmenu.jsp";

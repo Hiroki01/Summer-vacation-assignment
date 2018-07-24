@@ -56,55 +56,64 @@
 		<div id="main">
 
 			<section id="new" class="box">
-				<h2 id="newinfo_hdr" class="close">
-					<span>更新情報・お知らせ</span>
-				</h2>
-				<dl id="newinfo">
-					<dt>2018/07/11</dt>
-					<dd>
-						試作なう<span class="newicon">NEW</span>
-					</dd>
-					<dt>2018/00/00</dt>
-					<dd>書くことないよねぇ</dd>
-					<dt>2018/00/00</dt>
-					<dd>書くことないよねぇ</dd>
-					<dt>2018/00/00</dt>
-					<dd>書くことないよねぇ</dd>
-					<dt>2018/00/00</dt>
-					<dd>書くことないよねぇ</dd>
-					<dt>2018/00/00</dt>
-					<dd>書くことないよねぇ</dd>
-				</dl>
-			</section>
+				<form action="/Qualification/Add_Result" name="f" class="contact"
+					method="post">
+					<p>以下のフォームにご入力の上、「入力内容の確認画面へ」ボタンをクリックしてください。</p>
 
-			<section class="box">
-
-				<h2>
-					<span>使用方法等</span>必読
-				</h2>
-
-				<h3>受験予定登録</h3>
-				<p>
-					受験予定の資格を登録することができます。<br>間違えると更新できませんので確認をしっかり行ってください。
-				</p>
-
-				<h3 class="color1">合格済み資格</h3>
-				<p>
-					合格している資格のみを表示するページです。<br>次受験の資格の参考にしてください。
-				</p>
-
-				<h3>受験結果更新</h3>
-				<p>受験予定登録ページで登録してあり、受験結果が出たものだけ更新してください。</p>
-
-				<h3>受験済み一覧</h3>
-				<p>
-					受験登録をしたものが全て表示されます。<br>不合格、未受験も対象です。
-				</p>
-				<h3>プロフィール</h3>
-				<p>
-					登録アカウント情報の変更を行えるページです。<br>登録ID（学籍番号）は変更できないので、変更したい場合は担当教師に依頼してください。
-				</p>
-
+					<p class="attention">
+						<img src="/Qualification/image/required1.gif" alt="必須" width="26"
+							height="15"> マークの項目は入力必須となります。
+					</p>
+					<table>
+						<tbody>
+							<tr>
+								<th><label for="id">学籍番号：</label></th>
+								<td class="arbitrary"><img
+									src="/Qualification/image/required1.gif" alt="必須" width="26"
+									height="15"></td>
+								<td><input type="text" name="id" required> <br>
+									<span class="supplement">注意） 1000001以下は入力できません</span></td>
+							</tr>
+							<tr>
+								<th><label for="name">氏名：</label></th>
+								<td class="arbitrary"><img
+									src="/Qualification/image/required1.gif" alt="必須" width="26"
+									height="15"></td>
+								<td><input type="text" name="name" required><br>
+									<span class="supplement">例） 田中 太郎</span></td>
+							</tr>
+							<tr>
+								<th><label for="name">氏名（カタカナ）：</label></th>
+								<td class="arbitrary"><img
+									src="/Qualification/image/required1.gif" alt="必須" width="26"
+									height="15"></td>
+								<td><input type="text" name="namek" required><br>
+									<span class="supplement">例） タナカ タロウ</span></td>
+							</tr>
+							<tr>
+								<th><label for="email">メールアドレス:</label></th>
+								<td class="arbitrary"><img
+									src="/Qualification/image/required1.gif" alt="必須" width="26"
+									height="15"></td>
+								<td><input type="email" name="email" required><span
+									class="supplement">（半角英数字）</span><br> <span
+									class="supplement">ご入力お間違えの無いように</span></td>
+							</tr>
+							<tr>
+								<th><label for="pass"> パスワード：</label></th>
+								<td class="arbitrary"><img
+									src="/Qualification/image/required1.gif" alt="必須" width="26"
+									height="15"></td>
+								<td><input type="password" name="pass" required><br>
+									<span class="supplement">ご入力お間違えの無いように</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="button">
+						<input type="submit" value="入力内容の確認画面へ">
+					</p>
+					<br>
+				</form>
 			</section>
 		</div>
 		<!--/main-->
