@@ -106,7 +106,7 @@
 
 			<%} %>
 			<br>
-			<div id="bar"></div>
+			<p><a href="/Qualification/CSV">ダウンロード</a></p>
 			</section>
 		</div>
 		<!--main-->

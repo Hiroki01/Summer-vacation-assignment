@@ -96,7 +96,7 @@
 					<tr>
 						<td><%=anko.getName() %></td>
 						<td><%=anko.getDate() %></td>
-						<td><%=anko.getSid() %></td>
+						<td><%=anko.getSname() %></td>
 						<td><%=anko.getResult() %></td>
 					</tr>
 					<%} %>
@@ -106,7 +106,7 @@
 
 			<%} %>
 			<br>
-			<div id="bar"></div>
+			<p><a href="/Qualification/CSV">ダウンロード</a></p>
 			</section>
 		</div>
 		<!--main-->

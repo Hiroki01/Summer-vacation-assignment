@@ -46,6 +46,10 @@ public class Class extends HttpServlet {
 			c = re.getParameter("set_in");
 			ArrayList<TeacherQualificationDTO> result = TeacherQualificationDAO.Searchs(d,g,c);
 			re.setAttribute("sikaku4", result);
+			s.setAttribute("csv4", result);
+			s.setAttribute("csv-4-1", d);
+			s.setAttribute("csv-4-2", g);
+			s.setAttribute("csv-4-3", c);
 
 			view = "/WEB-INF/teacher/class_result.jsp";
 		} catch (NumberFormatException e) {

@@ -42,6 +42,8 @@ public class Student extends HttpServlet {
 			id = Integer.parseInt(re.getParameter("num"));
 			ArrayList<TeacherQualificationDTO> result = TeacherQualificationDAO.search(id);
 			re.setAttribute("sikaku5", result);
+			s.setAttribute("csv5", result);
+			s.setAttribute("csv-5", id);
 
 			view = "/WEB-INF/teacher/student_result.jsp";
 		} catch (NumberFormatException e) {

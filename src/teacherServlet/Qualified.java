@@ -42,8 +42,8 @@ public class Qualified extends HttpServlet {
 			name =re.getParameter("qname");
 			ArrayList<TeacherQualificationDTO> result = TeacherQualificationDAO.resultSearch(name);
 			re.setAttribute("sikaku", result);
-
-
+			s.setAttribute("csv", result);
+			s.setAttribute("csv-1", name);
 
 			view = "/WEB-INF/teacher/qualified_result.jsp";
 		} catch (NumberFormatException e) {

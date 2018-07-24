@@ -96,7 +96,7 @@
 				%>
 				<form action="/Qualification/Desingnated" method="post">
 					<table class="example" style="color: black">
-						<caption>資格受験者検索</caption>
+						<caption style="color:write;">資格受験者検索</caption>
 						<tbody>
 							<tr>
 								<td>調べたい資格名入力</td>

@@ -96,7 +96,7 @@
 				%>
 				<form action="/Qualification/Qualified" method="post">
 					<table class="example" style="color: black">
-						<caption>ログイン画面</caption>
+						<caption style="color:write;">資格所持者</caption>
 						<tbody>
 							<tr>
 								<td>調べたい資格名入力</td>

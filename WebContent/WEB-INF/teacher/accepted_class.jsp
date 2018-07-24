@@ -96,7 +96,7 @@
 				%>
 				<form action="/Qualification/Accepted" method="post">
 					<table class="example" style="color: black">
-						<caption>検索したい学科・学年・クラスの指定をしてください。</caption>
+						<caption style="color:write;">検索したい学科・学年・クラスの指定をしてください。</caption>
 						<tbody>
 						<tr>
 							<th><label for="department"> 学科：</label></th>

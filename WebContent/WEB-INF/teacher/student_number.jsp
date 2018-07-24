@@ -96,7 +96,7 @@
 				%>
 				<form action="/Qualification/Student" method="post">
 					<table class="example" style="color: black">
-						<caption>生徒検索</caption>
+						<caption style="color:write;">生徒検索</caption>
 						<tbody>
 							<tr>
 								<td>学籍番号</td>

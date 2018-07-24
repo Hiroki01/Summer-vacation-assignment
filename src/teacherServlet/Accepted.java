@@ -46,6 +46,11 @@ public class Accepted extends HttpServlet {
 			c = re.getParameter("set_in");
 			ArrayList<TeacherQualificationDTO> result = TeacherQualificationDAO.Search(d,g,c);
 			re.setAttribute("sikaku3", result);
+			s.setAttribute("csv3", result);
+			s.setAttribute("csv-3-1", d);
+			s.setAttribute("csv-3-2", g);
+			s.setAttribute("csv-3-3", c);
+
 
 			view = "/WEB-INF/teacher/accepted_result.jsp";
 		} catch (NumberFormatException e) {
