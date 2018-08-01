@@ -7,7 +7,7 @@
 <title>管理者用メニュー</title>
 <meta content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/Qualification/css/table.css"
+	<link rel="stylesheet" href="/Qualification/css/table.css"
 	type="text/css" />
 <link rel="stylesheet" href="/Qualification/css/style.css">
 <!-- drawer.css -->
@@ -64,15 +64,15 @@
 						<img src="/Qualification/image/required1.gif" alt="必須" width="26"
 							height="15"> マークの項目は入力必須となります。
 					</p>
-					<table>
-						<tbody>
+					<table class="example">
+						<tbody style="color:black">
 							<tr>
-								<th><label for="id">学籍番号：</label></th>
+								<th><label for="id">教師番号：</label></th>
 								<td class="arbitrary"><img
 									src="/Qualification/image/required1.gif" alt="必須" width="26"
 									height="15"></td>
 								<td><input type="text" name="id" required> <br>
-									<span class="supplement">注意） 1000001以下は入力できません</span></td>
+									<span class="supplement">注意） 1000000以上は入力できません</span></td>
 							</tr>
 							<tr>
 								<th><label for="name">氏名：</label></th>
@@ -81,14 +81,6 @@
 									height="15"></td>
 								<td><input type="text" name="name" required><br>
 									<span class="supplement">例） 田中 太郎</span></td>
-							</tr>
-							<tr>
-								<th><label for="name">氏名（カタカナ）：</label></th>
-								<td class="arbitrary"><img
-									src="/Qualification/image/required1.gif" alt="必須" width="26"
-									height="15"></td>
-								<td><input type="text" name="namek" required><br>
-									<span class="supplement">例） タナカ タロウ</span></td>
 							</tr>
 							<tr>
 								<th><label for="email">メールアドレス:</label></th>

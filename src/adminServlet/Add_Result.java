@@ -39,11 +39,10 @@ public class Add_Result extends HttpServlet {
 		try {
 			int id = Integer.parseInt(re.getParameter("id"));
 			String name = re.getParameter("name");
-			String namek = re.getParameter("namek");
 			String email = re.getParameter("email");
 			String pass = re.getParameter("pass");
 
-			AdminDTO result = AdminDAO.Insert(id, name, namek,email,pass);
+			AdminDTO result = AdminDAO.Insert(id, name, email,pass);
 			re.setAttribute("add", result);
 			view = "/WEB-INF/admin/add_Result.jsp";
 		} catch (NumberFormatException e) {

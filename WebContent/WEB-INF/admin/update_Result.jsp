@@ -52,22 +52,15 @@
 
     </script>
 	<div id="container">
-
 		<div id="main">
-
 			<section id="new" class="box">
 				<p>更新完了</p>
-
 			</section>
 		</div>
 		<!--/main-->
-
-
-
 		<p id="pagetop">
 			<a href="#">↑</a>
 		</p>
-
 		<footer>
 			<small>&copy; 1999-<span id="thisYear"></span> hirasawa
 				junjun
@@ -83,8 +76,6 @@
         document.getElementById("thisYear").innerHTML = thisYear;
 
     </script>
-
-
 	<script type="text/javascript">
         if (OCwindowWidth() <= 800) {
             open_close("newinfo_hdr", "newinfo");

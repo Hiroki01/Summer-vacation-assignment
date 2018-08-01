@@ -62,8 +62,8 @@
 						<img src="/Qualification/image/required1.gif" alt="必須" width="26"
 							height="15"> マークの項目は入力必須となります。
 					</p>
-					<table>
-						<tbody>
+					<table class="example">
+						<tbody style="color:black">
 							<tr>
 								<th><label for="id">学籍番号：</label></th>
 								<td class="arbitrary"><img
