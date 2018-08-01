@@ -1,16 +1,16 @@
 ﻿・テーブル１（生徒用）
 CREATE TABLE Student (
-		id INT(9) NOT NULL,
-		name VARCHAR(64) NOT NULL,
-		namek VARCHAR(64) NOT NULL,
-		gender VARCHAR(5) NOT NULL,
-		email VARCHAR(64) NOT NULL,
-		department VARCHAR(20) NOT NULL,
-		course VARCHAR(30) NOT NULL,
-		school_year INT(1) NOT NULL,
-		set_in INT(1) NOT NULL, 
-		pass VARCHAR(64) NOT NULL,
-		PRIMARY KEY (id));
+	id INT(9) NOT NULL,
+	name VARCHAR(64) NOT NULL,
+	namek VARCHAR(64) NOT NULL,
+	gender VARCHAR(5) NOT NULL,
+	email VARCHAR(64) NOT NULL,
+	department VARCHAR(20) NOT NULL,
+	course VARCHAR(30) NOT NULL,
+	school_year INT(1) NOT NULL,
+	set_in INT(1) NOT NULL, 
+	pass VARCHAR(64) NOT NULL,
+	PRIMARY KEY (id));
 
 生徒ID
 名前
@@ -25,12 +25,12 @@ CREATE TABLE Student (
 
 ・テーブル２（教師用）
 CREATE TABLE Teacher (
-		id INT(9) NOT NULL,
-		name VARCHAR(64) NOT NULL,
-		namek VARCHAR(64) NOT NULL,
-		email VARCHAR(64) NOT NULL,
-		pass VARCHAR(64) NOT NULL,
-		PRIMARY KEY (id));
+	id INT(9) NOT NULL,
+	name VARCHAR(64) NOT NULL,
+	namek VARCHAR(64) NOT NULL,
+	email VARCHAR(64) NOT NULL,
+	pass VARCHAR(64) NOT NULL,
+	PRIMARY KEY (id));
 
 教師ID
 名前
@@ -40,12 +40,12 @@ CREATE TABLE Teacher (
 
 ・テーブル３（資格情報用）
 CREATE TABLE Qualification(
-		id INT(6) NOT NULL AUTO_INCREMENT,	
-		name VARCHAR(64) NOT NULL,
-		date VARCHAR(64) NOT NULL,
-		sid INT(9) NOT NULL,
-		result VARCHAR(3) NOT NULL,
-		PRIMARY KEY (id));
+	id INT(6) NOT NULL AUTO_INCREMENT,	
+	name VARCHAR(64) NOT NULL,
+	date VARCHAR(64) NOT NULL,
+	sid INT(9) NOT NULL,
+	result VARCHAR(3) NOT NULL,
+	PRIMARY KEY (id));
 ID
 資格名
 受験日
@@ -54,21 +54,22 @@ ID
 
 ・テーブル４（管理者用）
 CREATE TABLE Admin (
-		id INT(9) NOT NULL,
-		name VARCHAR(64) NOT NULL,
-		email VARCHAR(64) NOT NULL,
-		pass VARCHAR(64) NOT NULL,
-		PRIMARY KEY (id));
+	id INT(9) NOT NULL,
+	name VARCHAR(64) NOT NULL,
+	email VARCHAR(64) NOT NULL,
+	pass VARCHAR(64) NOT NULL,
+	PRIMARY KEY (id));
 
 管理者ID
 管理者名前
 
 ・テーブル5（登録済み資格用）
 CREATE TABLE qua (
-		id INT(6) NOT NULL,
-		name VARCHAR(64) NOT NULL,
-		sponsorship VARCHAR(64) NOT NULL,
-		PRIMARY KEY (id));
+	id INT(6) NOT NULL,
+	name VARCHAR(64) NOT NULL,
+	sponsorship VARCHAR(64) NOT NULL,
+	PRIMARY KEY (id));
+
 資格ID
 資格名
 主催
@@ -104,20 +105,18 @@ insert into student values(4171132,'平澤　惇哉','ヒラサワ　ジュン�
 受験結果検索（ユーザ個別）〇
 学年ごと検索〇
 クラスごと検索〇
-学生番号検索
-CSVはボタンで共通処理
+学生番号検索〇
+CSVはボタンで共通処理〇
 
 管理者
-教師登録
-ユーザ削除
-ユーザ更新
+教師登録〇
+ユーザ削除〇
+ユーザ更新(id)〇
 
 オリジナル機能
-メール承認でもいれましょうかしら
+メール承認でもいれましょうかしら（今回は必要性を感じなかったのでなし）
 css
 js
 追加予定
 
-git clone https://Hiroki01@bitbucket.org/Hiroki01/summer.git
-
-https://bitbucket.org/Hiroki01/summer/src/master/
+https://github.com/Hiroki01/Summer-vacation-assignment
