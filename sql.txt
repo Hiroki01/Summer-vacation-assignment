@@ -1,4 +1,5 @@
 CREATE DATABASE Qualification;
+use Qualification;
 grant all on Qualification.* to got@localhost identified by 'pass';
 CREATE TABLE Student (
 	id INT(9) NOT NULL,

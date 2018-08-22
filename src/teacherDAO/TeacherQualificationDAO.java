@@ -252,7 +252,7 @@ public class TeacherQualificationDAO {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Qualification?useSSL=false", "got", "pass");
-			String sql = "SELECT * FROM Qualification WHERE sid = ? ORDER BY date+0;;";
+			String sql = "SELECT * FROM Qualification WHERE sid = ? ORDER BY date+0;";
 			ps = con.prepareStatement(sql);
 			ps.setInt(1, key);
 			rs = ps.executeQuery();

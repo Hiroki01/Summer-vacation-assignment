@@ -65,7 +65,7 @@
 					<table class="example">
 						<tbody style="color:black">
 							<tr>
-								<th><label for="id">学籍番号：</label></th>
+								<th><label for="id">学籍番号</label></th>
 								<td class="arbitrary"><img
 									src="/Qualification/image/required1.gif" alt="必須" width="26"
 									height="15"></td>
@@ -73,23 +73,23 @@
 									<span class="supplement">注意） 1000001以下は入力できません</span></td>
 							</tr>
 							<tr>
-								<th><label for="name">氏名：</label></th>
+								<th><label for="name">氏名</label></th>
 								<td class="arbitrary"><img
 									src="/Qualification/image/required1.gif" alt="必須" width="26"
 									height="15"></td>
 								<td><input type="text" name="name" required><br>
-									<span class="supplement">例） 田中 太郎</span></td>
+									<span class="supplement">例） 田中 太郎（苗字と名前の間に全角スペース）</span></td>
 							</tr>
 							<tr>
-								<th><label for="name">氏名（カタカナ）：</label></th>
+								<th><label for="name">氏名（カタカナ）</label></th>
 								<td class="arbitrary"><img
 									src="/Qualification/image/required1.gif" alt="必須" width="26"
 									height="15"></td>
 								<td><input type="text" name="namek" required><br>
-									<span class="supplement">例） タナカ タロウ</span></td>
+									<span class="supplement">例） タナカ タロウ（苗字と名前の間に全角スペース）</span></td>
 							</tr>
 							<tr>
-								<th><label for="gender">性別：</label></th>
+								<th><label for="gender">性別</label></th>
 								<td class="arbitrary"><img
 									src="/Qualification/image/required1.gif" alt="必須" width="26"
 									height="15"></td>
@@ -102,7 +102,7 @@
 								</select></td>
 							</tr>
 							<tr>
-								<th><label for="email">メールアドレス:</label></th>
+								<th><label for="email">メールアドレス</label></th>
 								<td class="arbitrary"><img
 									src="/Qualification/image/required1.gif" alt="必須" width="26"
 									height="15"></td>
@@ -111,7 +111,7 @@
 									class="supplement">ご入力お間違えの無いように</span></td>
 							</tr>
 							<tr>
-								<th><label for="department"> 学科：</label></th>
+								<th><label for="department"> 学科</label></th>
 								<td class="arbitrary"><img
 									src="/Qualification/image/required1.gif" alt="必須" width="26"
 									height="15"></td>
@@ -128,7 +128,7 @@
 								</select></td>
 							</tr>
 							<tr>
-								<th><label for="course"> コース：</label></th>
+								<th><label for="course"> コース</label></th>
 								<td class="arbitrary"><img
 									src="/Qualification/image/required1.gif" alt="必須" width="26"
 									height="15"></td>
@@ -169,7 +169,7 @@
 								</select></td>
 							</tr>
 							<tr>
-								<th><label for="gaku">学年：</label></th>
+								<th><label for="gaku">学年</label></th>
 								<td class="arbitrary"><img
 									src="/Qualification/image/required1.gif" alt="必須" width="26"
 									height="15"></td>
@@ -181,7 +181,7 @@
 								</select></td>
 							</tr>
 							<tr>
-								<th><label for="set_in">組：</label></th>
+								<th><label for="set_in">組</label></th>
 								<td class="arbitrary"><img
 									src="/Qualification/image/required1.gif" alt="必須" width="26"
 									height="15"></td>
@@ -191,7 +191,7 @@
 								</select></td>
 							</tr>
 							<tr>
-								<th><label for="pass"> パスワード：</label></th>
+								<th><label for="pass"> パスワード</label></th>
 								<td class="arbitrary"><img
 									src="/Qualification/image/required1.gif" alt="必須" width="26"
 									height="15"></td>
