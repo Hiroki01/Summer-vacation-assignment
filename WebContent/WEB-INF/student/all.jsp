@@ -45,6 +45,8 @@
 				<li><a class="drawer-menu-item"
 					href="/Qualification/All_qualifications"><span>ALL</span>受験済み一覧</a></li>
 				<li><a class="drawer-menu-item" href="/Qualification/Profile"><span>PROFILE</span>プロフィール</a></li>
+				<li><a class="drawer-menu-item"
+					href="/Qualification/Logout"><span>Logout</span>ログアウト</a></li>
 			</ul>
 		</nav>
 	</header>

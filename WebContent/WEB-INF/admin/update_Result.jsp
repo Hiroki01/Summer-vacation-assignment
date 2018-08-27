@@ -40,6 +40,8 @@
 					href="/Qualification/Delete_User"><span>DELETE</span>ユーザ削除</a></li>
 				<li><a class="drawer-menu-item"
 					href="/Qualification/Update_Id"><span>UPDATE</span>ID更新</a></li>
+					<li><a class="drawer-menu-item"
+					href="/Qualification/Logout"><span>Logout</span>ログアウト</a></li>
 			</ul>
 		</nav>
 	</header>

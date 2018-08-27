@@ -49,6 +49,8 @@
 				<li><a class="drawer-menu-item"
 					href="/Qualification/Student_number"><span> Search
 							by Student ID Number</span>学籍番号毎検索</a></li>
+				<li><a class="drawer-menu-item"
+					href="/Qualification/Logout"><span>Logout</span>ログアウト</a></li>
 			</ul>
 		</nav>
 	</header>
