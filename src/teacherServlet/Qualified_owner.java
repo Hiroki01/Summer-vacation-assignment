@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Qualified_owner
@@ -29,6 +30,21 @@ public class Qualified_owner extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//資格所持者検索用servlet
+		HttpSession s = request.getSession(true);
+		s.removeAttribute("csv");
+		s.removeAttribute("csv-1");
+		s.removeAttribute("csv2");
+		s.removeAttribute("csv-2");
+		s.removeAttribute("csv3");
+		s.removeAttribute("csv-3-1");
+		s.removeAttribute("csv-3-2");
+		s.removeAttribute("csv-3-3");
+		s.removeAttribute("csv4");
+		s.removeAttribute("csv-4-1");
+		s.removeAttribute("csv-4-2");
+		s.removeAttribute("csv-4-3");
+		s.removeAttribute("csv5");
+		s.removeAttribute("csv-5");
 		String view = "/WEB-INF/teacher/qualified_owner.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 		dispatcher.forward(request, response);

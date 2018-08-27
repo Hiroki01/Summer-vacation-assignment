@@ -54,14 +54,12 @@ public class CSV extends HttpServlet {
 				for (TeacherQualificationDTO anko : result) {
 					writer.write(anko.getName() + "," + anko.getSname() + "," + anko.getDate() + "," +  anko.getResult() + ",\n");
 				}
-				s.invalidate();
 			} else if (null != s.getAttribute("csv2")) {
 				String name = (String) s.getAttribute("csv-2");
 				ArrayList<TeacherQualificationDTO> result = TeacherQualificationDAO.resultSearch2(name);
 				for (TeacherQualificationDTO anko : result) {
 					writer.write(anko.getName() + "," + anko.getSname() + "," + anko.getDate()+ "," +  anko.getResult() + ",\n");
 				}
-				s.invalidate();
 			} else if (null != s.getAttribute("csv3")) {
 				String d = (String) s.getAttribute("csv-3-1");
 				String g = (String) s.getAttribute("csv-3-2");
@@ -70,7 +68,6 @@ public class CSV extends HttpServlet {
 				for (TeacherQualificationDTO anko : result) {
 					writer.write(anko.getName() + "," + anko.getSname() + "," + anko.getDate()+ "," +  anko.getResult() + ",\n");
 				}
-				s.invalidate();
 			} else if (null != s.getAttribute("csv4")) {
 				String d = (String) s.getAttribute("csv-4-1");
 				String g = (String) s.getAttribute("csv-4-2");
@@ -79,14 +76,12 @@ public class CSV extends HttpServlet {
 				for (TeacherQualificationDTO anko : result) {
 					writer.write(anko.getName() + "," + anko.getSname() + "," + anko.getDate()+ "," +  anko.getResult() + ",\n");
 				}
-				s.invalidate();
 			} else if (null != s.getAttribute("csv5")) {
 				int id = (int) s.getAttribute("csv-5");
 				ArrayList<TeacherQualificationDTO> result = TeacherQualificationDAO.search(id);
 				for (TeacherQualificationDTO anko : result) {
 					writer.write(anko.getName() + "," + anko.getSname() + "," + anko.getDate()+ "," +  anko.getResult() + ",\n");
 				}
-				s.invalidate();
 			} else {
 				System.out.println("なんてこった");
 				System.out.println(System.getProperty("file.encoding"));
